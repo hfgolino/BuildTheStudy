@@ -1,0 +1,1805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Build the Study</title>
+<meta name="description" content="Week 12 lab, Research Methods and Data Analysis I, University of Virginia. Design a study, get it past the ethics board, run it, and defend only the claims your design supports.">
+<meta name="theme-color" content="#0d1626">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAFZElEQVR4Xu3dsW7bShBGYTq4bdo0qdIYbvJGeTy/UZogTaq8x0WwgCBYFDncf2d2dvd8SBVIlMg9GlK2Zb98/vK6AbU+1d4R+IeAICEgSAgIEgKChIAgISBICAgSAoKEgCAhIEgICBICgoSAICEgSAgIEgKChIAgISBICAgSAoKEgCAhIEgICBICguQ/6d7t/P3zs93GVvH12/fuu/rS8aPNRNNQr5j6BEQ6TuIzig6IdAJEZhR6EU09MSKPc1xAkXuFsKMdcQoL2xk88j6duQdkrMd7P6eU4dj2/zoQ6VQrh86YkRPfCXS8b6TTUK9D7RjQwS6RjpP4Y+71Lix+T7BtR69MpzOdV0DPMHu8BR9hl4CexR68b8t6dpw9hpBLQFhH+4AYPxmEDaH2AWEpQQFx9RMv5pgHBYRZNQ5o9wIo5qWAR7tHvu17scYBYTUEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECT9P1iIXb9+/L7//7f315wHioDS+ZBOUf4zYUYElMhuOvcSZsQ1UBan9dzYbxmAgCAhoBSuDpWrt/dDQJAQUH9146TuXs0RECQEBAkBQUJAkBBQf3XfoKi7V3MEBAkB9VfxhjzJ+Nk2Auqtop5UmEDjyTN+to0f5+jq6vhJlU7BzwONIWE6BNSZcfykTafgGqiPOeohoNSSzx4mUDfG8TMETmFJDTF+Vn8X1uWzVzONn3UD6vXZK2M9o4yfFQM6XcLun70aqJ7l3oWd1nNjv6Wdxza74yI6iLGescbPWhPIuISuQ2g+TKAIxnaHGz8LTSDjEn5Qd686I9azUEAdRVYYj1OYL2M9g44fJlAK49ZDQOeMI2SXct9RcAo7V9eB8V5Dj59VJpBxLQ/oW5jV/BOo1dpf2o7xxqOPn1UmUCvGLIwmqGf+gNou+e3X7R5r/qCZzXwKc1rI480aH3SO8TPzBDIuZB1x49PUM21A9gV+e38t/66WdPAzjUuZ8BR2qZ7bYrdq6FTFA2U2YUDVKpb2PlZ7uDOZLSD7Ku7mUt2Q8XErtp/cVAEZV/H4z95UrLHxcSu2nN88ARlX0fJHk6ZcaSeTBNSwnqJ5Q803mMQMATWvx6mhKc0QkJ9WY6PVdhIaPiCn8aN8feiDiesZ/ivR3vVwLjs18ASKqUdvyP48RzRqQPZVaXUGabWdyQwZUHw9eGbIgJDHeAExflIZ4xeN26Np+Pb70dv7a5Jnkkf2gCoWzOMbERjvGujXj98J67n6Xuzq7YeT9BqoLh1mT7ykAWVmHyr2W44r4zVQ/vFTyjh4niukU2QMqE78mu1mFP80+koXUPX46WW1Yj7gGggSAoKEgCAhIEjSBVR3TVp3L+jSBYSxZAzo6ji5ens0lDEgDCRpQPahYr8lPKT7SvQN328aQt6ACr7flFz2gO4zQkJJr4EwCgKChIAgISBICAgSAoKEgCAhIEgICBICgqRxQF+/fX98On///JSeI2rtHvndNarWOCCsJigghlC8mGMeFBBm1T6gZ6fYmBcEimdHu+0F0PC/aBzdtZ9A28YQ6ixs/HSYQJzIvAUfYZcJdDCEDk7P0B3U0/zqp3j5/OXyX7y2O341OO3Smnodat+ALPOGjESn5yzXI9z/Uxll/113clan6QRwn0CWIQQ/3q/MiICKDC+XpXinU3i9C3sUsz8owo52XECRe7W4sHrc38Y/w+nMSWQ6Rdw10CMyaig+nf4B3SOmCr2iuddzAmECoRfRmA8BQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECT/A3immhwM32uuAAAAAElFTkSuQmCC">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAIAAADdvvtQAAAFZElEQVR4Xu3dsW7bShBGYTq4bdo0qdIYbvJGeTy/UZogTaq8x0WwgCBYFDncf2d2dvd8SBVIlMg9GlK2Zb98/vK6AbU+1d4R+IeAICEgSAgIEgKChIAgISBICAgSAoKEgCAhIEgICBICgoSAICEgSAgIEgKChIAgISBICAgSAoKEgCAhIEgICBICguQ/6d7t/P3zs93GVvH12/fuu/rS8aPNRNNQr5j6BEQ6TuIzig6IdAJEZhR6EU09MSKPc1xAkXuFsKMdcQoL2xk88j6duQdkrMd7P6eU4dj2/zoQ6VQrh86YkRPfCXS8b6TTUK9D7RjQwS6RjpP4Y+71Lix+T7BtR69MpzOdV0DPMHu8BR9hl4CexR68b8t6dpw9hpBLQFhH+4AYPxmEDaH2AWEpQQFx9RMv5pgHBYRZNQ5o9wIo5qWAR7tHvu17scYBYTUEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECT9P1iIXb9+/L7//7f315wHioDS+ZBOUf4zYUYElMhuOvcSZsQ1UBan9dzYbxmAgCAhoBSuDpWrt/dDQJAQUH9146TuXs0RECQEBAkBQUJAkBBQf3XfoKi7V3MEBAkB9VfxhjzJ+Nk2Auqtop5UmEDjyTN+to0f5+jq6vhJlU7BzwONIWE6BNSZcfykTafgGqiPOeohoNSSzx4mUDfG8TMETmFJDTF+Vn8X1uWzVzONn3UD6vXZK2M9o4yfFQM6XcLun70aqJ7l3oWd1nNjv6Wdxza74yI6iLGescbPWhPIuISuQ2g+TKAIxnaHGz8LTSDjEn5Qd686I9azUEAdRVYYj1OYL2M9g44fJlAK49ZDQOeMI2SXct9RcAo7V9eB8V5Dj59VJpBxLQ/oW5jV/BOo1dpf2o7xxqOPn1UmUCvGLIwmqGf+gNou+e3X7R5r/qCZzXwKc1rI480aH3SO8TPzBDIuZB1x49PUM21A9gV+e38t/66WdPAzjUuZ8BR2qZ7bYrdq6FTFA2U2YUDVKpb2PlZ7uDOZLSD7Ku7mUt2Q8XErtp/cVAEZV/H4z95UrLHxcSu2nN88ARlX0fJHk6ZcaSeTBNSwnqJ5Q803mMQMATWvx6mhKc0QkJ9WY6PVdhIaPiCn8aN8feiDiesZ/ivR3vVwLjs18ASKqUdvyP48RzRqQPZVaXUGabWdyQwZUHw9eGbIgJDHeAExflIZ4xeN26Np+Pb70dv7a5Jnkkf2gCoWzOMbERjvGujXj98J67n6Xuzq7YeT9BqoLh1mT7ykAWVmHyr2W44r4zVQ/vFTyjh4niukU2QMqE78mu1mFP80+koXUPX46WW1Yj7gGggSAoKEgCAhIEjSBVR3TVp3L+jSBYSxZAzo6ji5ens0lDEgDCRpQPahYr8lPKT7SvQN328aQt6ACr7flFz2gO4zQkJJr4EwCgKChIAgISBICAgSAoKEgCAhIEgICBICgqRxQF+/fX98On///JSeI2rtHvndNarWOCCsJigghlC8mGMeFBBm1T6gZ6fYmBcEimdHu+0F0PC/aBzdtZ9A28YQ6ixs/HSYQJzIvAUfYZcJdDCEDk7P0B3U0/zqp3j5/OXyX7y2O341OO3Smnodat+ALPOGjESn5yzXI9z/Uxll/113clan6QRwn0CWIQQ/3q/MiICKDC+XpXinU3i9C3sUsz8owo52XECRe7W4sHrc38Y/w+nMSWQ6Rdw10CMyaig+nf4B3SOmCr2iuddzAmECoRfRmA8BQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECQEBAkBQUJAkBAQJAQECQFBQkCQEBAkBAQJAUFCQJAQECT/A3immhwM32uuAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Build the Study: Week 12 lab.
+   Layout idea: a dark blueprint table; every decision is a paper card laid on it. */
+:root {
+  --table: #0d1626;        /* the table */
+  --table-2: #14223a;      /* raised table areas */
+  --grid: rgba(120, 170, 230, 0.07);
+  --paper: #f2f5f9;        /* cards */
+  --paper-2: #e3e9f1;
+  --ink: #13203a;          /* text on paper */
+  --ink-soft: #4d5b74;
+  --chalk: #e8eef7;        /* text on the table */
+  --chalk-soft: #9fb0c8;
+  --accent: #e57200;       /* UVA orange: treatment, primary actions */
+  --accent-ink: #b45400;
+  --cyan: #3aa6d8;         /* comparison group */
+  --good: #1f9d55;
+  --bad: #d23b3b;
+  --warn: #c98a00;
+  --hidden-lo: #6c4cf5;    /* hidden variable gradient */
+  --hidden-hi: #f6c445;
+  --radius: 14px;
+  --font-display: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; min-height: 100%; }
+body {
+  background-color: var(--table);
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 28px 28px;
+  color: var(--chalk);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+}
+h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.15; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+
+/* ---------- top bar ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 20;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 10px clamp(16px, 3vw, 32px);
+  background: rgba(13, 22, 38, 0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--chalk); }
+.brand-mark { width: 28px; height: 28px; }
+.brand-name { font-family: var(--font-display); font-weight: 800; font-size: 19px; letter-spacing: 0.2px; }
+.pips { display: flex; gap: 6px; flex: 1; justify-content: center; flex-wrap: wrap; }
+.pip {
+  font-size: 13px; padding: 5px 11px; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14); color: var(--chalk-soft);
+  background: transparent;
+}
+.pip.done { color: var(--chalk); border-color: rgba(31,157,85,0.7); background: rgba(31,157,85,0.18); }
+.pip.now { color: #fff; border-color: var(--accent); background: rgba(229,114,0,0.22); font-weight: 700; }
+.tools { display: flex; align-items: center; gap: 8px; }
+.clock { font-family: var(--font-mono); font-size: 14px; color: var(--chalk-soft); padding: 0 6px; }
+.clock.late { color: var(--hidden-hi); }
+.icon-btn {
+  border: 1px solid rgba(255,255,255,0.18); background: transparent; color: var(--chalk);
+  padding: 6px 12px; border-radius: 999px; cursor: pointer; font-size: 13px; min-height: 36px;
+}
+.icon-btn:hover { background: rgba(255,255,255,0.07); }
+
+main { padding: clamp(16px, 3vw, 32px); max-width: 1280px; margin: 0 auto; outline: none; }
+
+/* ---------- generic paper ---------- */
+.paper {
+  background: var(--paper); color: var(--ink);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), 0 1px 0 rgba(255,255,255,0.6) inset;
+}
+.kicker { font-family: var(--font-mono); font-size: 12px; letter-spacing: 1.4px; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+.muted { color: var(--ink-soft); }
+.on-table .muted, .table-text .muted { color: var(--chalk-soft); }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  border: 0; border-radius: 12px; cursor: pointer;
+  padding: 12px 20px; min-height: 46px; font-weight: 700; font-size: 16px;
+  background: var(--accent); color: #fff;
+  box-shadow: 0 4px 0 var(--accent-ink);
+  transition: transform .08s ease, box-shadow .08s ease, filter .15s;
+}
+.btn:hover { filter: brightness(1.06); }
+.btn:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--accent-ink); }
+.btn[disabled] { background: #8d98aa; box-shadow: 0 4px 0 #6b7586; cursor: not-allowed; filter: none; }
+.btn.ghost { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--paper-2); }
+.btn.ghost.light { color: var(--chalk); box-shadow: inset 0 0 0 2px rgba(255,255,255,0.25); }
+.btn.small { padding: 8px 14px; min-height: 38px; font-size: 14px; }
+
+/* ---------- start screen ---------- */
+.start { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 28px; align-items: start; margin-top: 12px; }
+.start-hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; letter-spacing: -1px; }
+.start-hero h1 em { font-style: normal; color: var(--accent); }
+.start-hero .lede { font-size: 19px; color: var(--chalk-soft); margin-top: 14px; max-width: 58ch; }
+.flow { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 10px; margin-top: 26px; }
+.flow-step { background: var(--table-2); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 12px; }
+.flow-step b { display: block; font-family: var(--font-display); font-size: 16px; color: #fff; }
+.flow-step span { font-size: 13.5px; color: var(--chalk-soft); }
+.flow-step .n { font-family: var(--font-mono); color: var(--accent); font-size: 12px; }
+.missions-preview { display: grid; gap: 10px; margin-top: 22px; }
+.mp { display: flex; gap: 12px; align-items: center; padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px dashed rgba(255,255,255,0.14); }
+.mp .badge { font-family: var(--font-mono); font-size: 12px; color: var(--table); background: var(--chalk); border-radius: 6px; padding: 2px 7px; font-weight: 700; }
+.mp q { font-style: italic; color: var(--chalk); }
+
+.team-card { padding: 24px; display: grid; gap: 16px; }
+.team-card h2 { font-size: 26px; }
+.field { display: grid; gap: 6px; }
+.field label { font-weight: 700; font-size: 14px; }
+.field input, .field textarea, .field select {
+  border: 2px solid var(--paper-2); background: #fff; color: var(--ink);
+  border-radius: 10px; padding: 10px 12px; min-height: 44px;
+}
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--accent); outline: none; }
+.id-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 8px; }
+.roles { display: grid; gap: 8px; font-size: 14.5px; background: var(--paper-2); border-radius: 12px; padding: 12px 14px; }
+.roles b { font-family: var(--font-display); }
+.err { color: var(--bad); font-weight: 700; font-size: 14px; min-height: 1.2em; }
+
+/* ---------- mission layout ---------- */
+.mission-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 18px; align-items: end; margin-bottom: 18px; }
+.mission-head h1 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; }
+.claim-quote { font-family: var(--font-display); font-size: clamp(20px, 2.6vw, 28px); color: #fff; margin-top: 6px; }
+.claim-quote::before { content: "\201C"; color: var(--accent); }
+.claim-quote::after { content: "\201D"; color: var(--accent); }
+.role-chip { font-size: 13.5px; color: var(--chalk-soft); background: var(--table-2); border-radius: 12px; padding: 10px 12px; border: 1px solid rgba(255,255,255,0.08); max-width: 330px; }
+.role-chip b { color: var(--chalk); }
+
+.brief { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 12px; margin-bottom: 18px; }
+.brief .paper { padding: 14px 16px; }
+.brief h3 { font-size: 13px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 1.2px; color: var(--ink-soft); margin-bottom: 4px; }
+
+.board { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: 20px; align-items: start; }
+.steps { display: grid; gap: 16px; }
+.step { padding: 18px 18px 20px; }
+.step-title { display: flex; align-items: baseline; gap: 10px; margin-bottom: 12px; }
+.step-title .n { font-family: var(--font-mono); font-size: 13px; color: #fff; background: var(--ink); border-radius: 6px; padding: 2px 8px; }
+.step-title h2 { font-size: 21px; }
+.step-title .hint { font-size: 14px; color: var(--ink-soft); margin-left: auto; text-align: right; }
+
+.opts { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px; }
+.opt {
+  position: relative; text-align: left; cursor: pointer;
+  border: 2px solid var(--paper-2); background: #fff; color: var(--ink);
+  border-radius: 12px; padding: 12px 12px 12px; display: grid; gap: 6px;
+  transition: border-color .15s, transform .12s, box-shadow .15s;
+}
+.opt:hover { border-color: #b9c6d8; transform: translateY(-1px); }
+.opt[aria-pressed="true"] { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(229,114,0,0.18); }
+.opt[aria-pressed="true"]::after {
+  content: "Chosen"; position: absolute; top: 10px; right: 10px;
+  font-size: 11px; font-weight: 700; color: #fff; background: var(--accent); border-radius: 999px; padding: 2px 8px;
+}
+.opt[disabled] { opacity: .45; cursor: not-allowed; transform: none; }
+.opt .ic { width: 34px; height: 34px; color: var(--ink); }
+.opt b { font-family: var(--font-display); font-size: 16.5px; padding-right: 54px; }
+.opt .desc { font-size: 14px; color: var(--ink-soft); }
+.opt .meta { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+.chip { font-size: 12px; border-radius: 999px; padding: 2px 8px; background: var(--paper-2); color: var(--ink); font-weight: 700; }
+.chip.cost { background: #fff1e3; color: var(--accent-ink); }
+.chip.why { background: #e8f3fa; color: #145a7d; font-weight: 400; }
+
+.checks { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+.check {
+  display: grid; grid-template-columns: 26px 1fr; gap: 8px; align-items: start;
+  border: 2px solid var(--paper-2); background: #fff; border-radius: 12px; padding: 10px 12px; cursor: pointer;
+}
+.check input { width: 20px; height: 20px; margin-top: 2px; accent-color: var(--accent); }
+.check b { font-size: 15px; }
+.check .desc { font-size: 13.5px; color: var(--ink-soft); grid-column: 2; }
+.check.on { border-color: var(--accent); }
+.check.disabled { opacity: .45; cursor: not-allowed; }
+
+.slider-row { display: grid; grid-template-columns: 1fr auto; gap: 14px; align-items: center; }
+.slider-row input[type=range] { width: 100%; accent-color: var(--accent); height: 34px; }
+.n-readout { font-family: var(--font-mono); font-size: 26px; font-weight: 700; min-width: 110px; text-align: right; }
+.people { display: flex; flex-wrap: wrap; gap: 3px; margin-top: 10px; }
+.people i { width: 9px; height: 9px; border-radius: 50%; background: var(--ink-soft); opacity: .55; display: block; }
+
+/* side panel */
+.side { position: sticky; top: 76px; display: grid; gap: 14px; }
+.budget { padding: 16px; }
+.budget-top { display: flex; justify-content: space-between; align-items: baseline; }
+.budget-top b { font-family: var(--font-display); font-size: 17px; }
+.budget-num { font-family: var(--font-mono); font-size: 30px; font-weight: 700; }
+.budget-num.over { color: var(--bad); }
+.bar { height: 14px; border-radius: 999px; background: var(--paper-2); overflow: hidden; margin: 8px 0 10px; }
+.bar > span { display: block; height: 100%; background: linear-gradient(90deg, var(--accent), #f39a3d); border-radius: 999px; transition: width .25s ease; }
+.bar.over > span { background: var(--bad); }
+.cost-lines { display: grid; gap: 3px; font-size: 13.5px; }
+.cost-lines div { display: flex; justify-content: space-between; gap: 10px; }
+.summary { padding: 16px; font-size: 14.5px; display: grid; gap: 8px; }
+.summary h3 { font-size: 17px; }
+.summary ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.label-pick { padding: 16px; display: grid; gap: 10px; }
+.label-pick h3 { font-size: 17px; }
+.label-pick p { font-size: 14px; }
+
+/* ---------- modal: ethics board ---------- */
+.modal-backdrop { position: fixed; inset: 0; background: rgba(5, 10, 20, 0.72); z-index: 50; display: grid; place-items: center; padding: 16px; }
+.modal { width: min(640px, 100%); max-height: calc(100% - 32px); overflow: auto; padding: 26px; position: relative; }
+.modal h2 { font-size: 26px; margin-bottom: 6px; }
+.verdicts { display: grid; gap: 10px; margin: 16px 0 18px; }
+.verdict { display: grid; grid-template-columns: 32px 1fr; gap: 10px; align-items: start; background: #fff; border-radius: 12px; padding: 12px; border: 2px solid var(--paper-2); }
+.verdict .mark { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 800; font-family: var(--font-display); }
+.verdict.ok .mark { background: var(--good); }
+.verdict.no .mark { background: var(--bad); }
+.verdict.meh .mark { background: var(--warn); }
+.verdict b { display: block; }
+.stamp {
+  position: absolute; top: 18px; right: 18px;
+  font-family: var(--font-display); font-weight: 800; font-size: 26px; letter-spacing: 2px;
+  padding: 6px 14px; border: 4px solid currentColor; border-radius: 10px;
+  transform: rotate(-9deg); opacity: .92;
+  animation: stamp .45s cubic-bezier(.2,1.6,.4,1) both;
+}
+.stamp.approved { color: var(--good); }
+.stamp.revise { color: var(--warn); }
+.stamp.rejected { color: var(--bad); }
+@keyframes stamp { from { transform: rotate(-9deg) scale(2.4); opacity: 0; } to { transform: rotate(-9deg) scale(1); opacity: .92; } }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; flex-wrap: wrap; }
+
+/* ---------- results ---------- */
+.results-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+.chart-card { padding: 18px; }
+.chart-card h2 { font-size: 22px; }
+.chart-wrap { margin-top: 10px; overflow-x: auto; }
+.chart-wrap svg { width: 100%; height: auto; display: block; min-width: 420px; }
+.axis text { font-family: var(--font-mono); font-size: 11px; fill: var(--ink-soft); }
+.axis line, .axis path { stroke: #c7d1de; }
+.dot { transition: transform .9s cubic-bezier(.2,.8,.2,1), fill .35s ease; }
+.stat-row { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 12px; }
+.stat { background: #fff; border-radius: 12px; padding: 10px 12px; border: 2px solid var(--paper-2); }
+.stat .v { font-family: var(--font-mono); font-size: 22px; font-weight: 700; }
+.stat .k { font-size: 12.5px; color: var(--ink-soft); }
+.toggle-hidden { margin-top: 12px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 13px; color: var(--ink-soft); align-items: center; }
+.legend i { width: 12px; height: 12px; border-radius: 50%; display: inline-block; margin-right: 5px; vertical-align: -1px; }
+.legend .grad { width: 70px; height: 10px; border-radius: 999px; background: linear-gradient(90deg, var(--hidden-lo), var(--hidden-hi)); display: inline-block; vertical-align: -1px; }
+.design-recap { font-size: 13.5px; color: var(--ink-soft); margin-top: 4px; }
+
+.reviewer { padding: 18px; position: relative; background: #fffdf6; }
+.reviewer-head { display: flex; gap: 12px; align-items: center; margin-bottom: 10px; }
+.reviewer-head svg { width: 52px; height: 52px; flex: none; }
+.reviewer-head h2 { font-size: 20px; }
+.reviewer ol { margin: 0; padding-left: 20px; display: grid; gap: 8px; font-size: 15px; }
+.reviewer li::marker { color: var(--bad); font-weight: 700; font-family: var(--font-mono); }
+.reviewer .praise { color: var(--good); }
+
+.claims { padding: 18px; display: grid; gap: 12px; }
+.claims h2 { font-size: 22px; }
+.claim { background: #fff; border: 2px solid var(--paper-2); border-radius: 12px; padding: 12px; display: grid; gap: 10px; }
+.claim p { font-size: 15.5px; font-weight: 700; }
+.claim .choices { display: flex; gap: 8px; flex-wrap: wrap; }
+.seg {
+  border: 2px solid var(--paper-2); background: #fff; color: var(--ink); border-radius: 999px;
+  padding: 6px 14px; cursor: pointer; font-size: 14px; font-weight: 700; min-height: 38px;
+}
+.seg[aria-pressed="true"].yes { background: var(--good); border-color: var(--good); color: #fff; }
+.seg[aria-pressed="true"].no { background: var(--ink); border-color: var(--ink); color: #fff; }
+.claim .verdict-line { font-size: 14px; border-radius: 10px; padding: 8px 10px; }
+.claim .verdict-line.right { background: #e6f6ec; color: #145c33; }
+.claim .verdict-line.wrong { background: #fde8e8; color: #8c1d1d; }
+.claim .verdict-line b { display: block; }
+
+.truth { padding: 18px; background: linear-gradient(135deg, #1d1546, #2b1d5c); color: #fff; }
+.truth h2 { font-size: 22px; }
+.truth p { color: #ddd6ff; margin-top: 6px; }
+.truth .big { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; }
+.truth .big > div { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 10px 14px; }
+.truth .big .v { font-family: var(--font-mono); font-size: 24px; font-weight: 700; color: var(--hidden-hi); }
+.truth .big .k { font-size: 12.5px; color: #cfc6ff; }
+
+.scorebar { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; margin-top: 18px; padding: 14px 18px; border-radius: var(--radius); background: var(--table-2); border: 1px solid rgba(255,255,255,0.1); }
+.scorebar .pts { font-family: var(--font-mono); font-size: 30px; font-weight: 700; color: #fff; }
+.scorebar .parts { font-size: 14px; color: var(--chalk-soft); flex: 1; }
+.case-card { padding: 18px; display: grid; gap: 12px; }
+.case-card blockquote { margin: 0; padding: 10px 14px; border-radius: 10px; background: #fff; font-style: italic; }
+
+/* ---------- replay ---------- */
+.replay-banner, .replay-offer {
+  display: flex; gap: 14px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+  padding: 14px 18px; border-radius: var(--radius); margin-bottom: 18px;
+  background: rgba(229,114,0,0.12); border: 1px dashed rgba(229,114,0,0.6); color: var(--chalk); font-size: 15px;
+}
+.replay-banner > div:first-child, .replay-offer > div:first-child { flex: 1 1 380px; }
+.replay-offer { margin-top: 14px; margin-bottom: 0; }
+.replay-offer .pace { color: var(--hidden-hi); }
+.round-tabs { display: flex; gap: 8px; margin: -6px 0 16px; }
+.round-tabs .seg { background: transparent; color: var(--chalk); border-color: rgba(255,255,255,0.25); }
+.round-tabs .seg[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: #fff; }
+.compare { padding: 18px; margin-top: 20px; display: grid; gap: 10px; }
+.compare h2 { font-size: 22px; }
+.compare .t-table th[scope=row] { font-family: var(--font-body); text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); width: 30%; }
+.compare td.diff { background: #fff4e8; font-weight: 700; }
+
+/* ---------- ticket ---------- */
+.ticket { padding: 26px; display: grid; gap: 18px; }
+.ticket h1 { font-size: 32px; }
+.rank { display: grid; grid-template-columns: auto 1fr; gap: 18px; align-items: center; }
+.rank-dial { width: 120px; height: 120px; }
+.rank h2 { font-size: 28px; }
+.t-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.t-table th, .t-table td { text-align: left; padding: 8px 6px; border-bottom: 1px solid var(--paper-2); vertical-align: top; }
+.t-table th { font-family: var(--font-mono); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft); }
+.t-wrap { overflow-x: auto; }
+.code-box { font-family: var(--font-mono); font-size: 13px; background: var(--paper-2); border-radius: 10px; padding: 10px 12px; word-break: break-all; }
+.wc { font-size: 13px; color: var(--ink-soft); }
+.wc.ok { color: var(--good); }
+.ticket-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.machine { font-family: var(--font-mono); font-size: 8px; color: #556; word-break: break-all; }
+
+/* ---------- method finder drawer ---------- */
+.finder { width: min(720px, 100%); }
+.finder ol { padding-left: 20px; display: grid; gap: 8px; }
+.finder table { width: 100%; border-collapse: collapse; font-size: 14px; margin-top: 10px; }
+.finder td, .finder th { border-bottom: 1px solid var(--paper-2); padding: 6px; text-align: left; vertical-align: top; }
+
+/* ---------- confetti ---------- */
+.confetti { position: fixed; inset: 0; pointer-events: none; z-index: 60; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1020px) {
+  .board, .results-grid, .start { grid-template-columns: minmax(0, 1fr); }
+  .side { position: static; }
+  .flow { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 640px) {
+  .brief { grid-template-columns: minmax(0,1fr); }
+  .mission-head { grid-template-columns: minmax(0,1fr); }
+  .id-row { grid-template-columns: minmax(0,1fr); }
+  .stat-row { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .tools .icon-btn#defsBtn { display: none; }
+  .topbar { position: static; gap: 8px; padding: 8px 16px; }
+  .brand-name { font-size: 17px; }
+  .pips { order: 3; flex-basis: 100%; justify-content: flex-start; }
+  .pip:not(.now) { display: none; }
+  .tools { margin-left: auto; }
+  .step-title { flex-wrap: wrap; }
+  .step-title .hint { margin-left: 0; text-align: left; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
+
+/* ---------- print: the exit ticket only ---------- */
+@media print {
+  body { background: #fff; color: #000; }
+  .topbar, .no-print, #modal-root, .confetti { display: none !important; }
+  main { padding: 0; max-width: none; }
+  .paper { box-shadow: none; border: 1px solid #ccd; }
+  .ticket { padding: 12px; }
+  .machine { color: #000; font-size: 7px; }
+  textarea { border: 1px solid #ccd !important; }
+  .print-text { white-space: pre-wrap; border: 1px solid #ccd; border-radius: 8px; padding: 8px; font-size: 13px; }
+}
+.print-text { display: none; }
+@media print { .print-text { display: block; } .screen-only { display: none !important; } }
+
+</style>
+</head>
+<body>
+<header class="topbar" id="topbar">
+  <div class="brand">
+    <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="6" fill="none" stroke="currentColor" stroke-width="2.5"/><path d="M9 21l5-6 4 4 5-8" fill="none" stroke="#E57200" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span class="brand-name">Build the Study</span>
+  </div>
+  <nav class="pips" id="pips" aria-label="Progress"></nav>
+  <div class="tools">
+    <span class="clock" id="clock" title="Time since you opened the lab">0:00</span>
+    <button class="icon-btn" id="soundBtn" type="button" aria-pressed="true" title="Sound on or off">Sound on</button>
+    <button class="icon-btn" id="defsBtn" type="button" title="Open the method finder">Method finder</button>
+  </div>
+</header>
+<main id="app" tabindex="-1"></main>
+<div id="modal-root"></div>
+<div class="sr-only" aria-live="polite" id="live"></div>
+<script>window.__BTS_STANDALONE__ = true;</script>
+<script>
+/* Build the Study: Week 12 lab, Research Methods & Data Analysis I, University of Virginia.
+   Static, client-side. No network calls, no accounts. State lives in localStorage.
+   Reading: Searle (1999), Introducing Research and Data in Psychology, Section Two (pp. 11-33). */
+(() => {
+'use strict';
+
+const STORE = 'bts-week12-v1';
+const SALT = 'uva-psyc-week12-build-the-study';
+const BUDGET = 100;
+const TARGET_MIN = 40;
+
+/* ====================================================================
+   Utilities
+   ==================================================================== */
+const $ = (s, r = document) => r.querySelector(s);
+const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+function fnv(str) {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) >>> 0; }
+  return h >>> 0;
+}
+const hex8 = (n) => (n >>> 0).toString(16).padStart(8, '0');
+function makeRng(seed) {
+  let a = seed >>> 0;
+  return () => {
+    a = (a + 0x6D2B79F5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+function normal(r) { let u = 0, v = 0; while (u === 0) u = r(); while (v === 0) v = r(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
+const logistic = (x) => 1 / (1 + Math.exp(-x));
+const clamp = (x, a, b) => Math.max(a, Math.min(b, x));
+const mean = (a) => a.reduce((s, x) => s + x, 0) / a.length;
+function variance(a) { const m = mean(a); return a.reduce((s, x) => s + (x - m) * (x - m), 0) / (a.length - 1); }
+function shuffle(arr, r) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function diffCI(a, b) {
+  if (a.length < 2 || b.length < 2) return { kind: 'diff', est: NaN, lo: -Infinity, hi: Infinity, ma: a.length ? mean(a) : NaN, mb: b.length ? mean(b) : NaN, na: a.length, nb: b.length };
+  const ma = mean(a), mb = mean(b);
+  const se = Math.sqrt(variance(a) / a.length + variance(b) / b.length);
+  const est = ma - mb;
+  return { kind: 'diff', est, lo: est - 1.96 * se, hi: est + 1.96 * se, ma, mb, na: a.length, nb: b.length };
+}
+function corr(x, y) {
+  const mx = mean(x), my = mean(y); let sxy = 0, sxx = 0, syy = 0;
+  for (let i = 0; i < x.length; i++) { const dx = x[i] - mx, dy = y[i] - my; sxy += dx * dy; sxx += dx * dx; syy += dy * dy; }
+  return sxy / Math.sqrt(sxx * syy);
+}
+function corrCI(x, y) {
+  const r = corr(x, y), n = x.length, z = Math.atanh(clamp(r, -0.999, 0.999)), se = 1 / Math.sqrt(n - 3);
+  return { kind: 'r', est: r, lo: Math.tanh(z - 1.96 * se), hi: Math.tanh(z + 1.96 * se), n };
+}
+function fmt(x, d = 1, sign = false) {
+  if (!isFinite(x)) return '–';
+  const s = Math.abs(x).toFixed(d);
+  const neg = x < 0 && Number(s) !== 0;
+  return (neg ? '−' : (sign && Number(s) !== 0 ? '+' : '')) + s;
+}
+function fmtR(x) { const s = fmt(x, 2); return s.replace(/^(−?)0\./, '$1.'); }
+const words = (s) => (String(s || '').trim().match(/[A-Za-z0-9À-ɏ'’-]+/g) || []).length;
+const plural = (n, w) => `${n} ${w}${n === 1 ? '' : 's'}`;
+
+/* ====================================================================
+   Sound (synthesized, optional)
+   ==================================================================== */
+let actx = null;
+function tone(freq, dur, type = 'sine', vol = 0.08, when = 0) {
+  if (!state.sound) return;
+  try {
+    actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+    const t0 = actx.currentTime + when;
+    const o = actx.createOscillator(), g = actx.createGain();
+    o.type = type; o.frequency.setValueAtTime(freq, t0);
+    g.gain.setValueAtTime(0.0001, t0);
+    g.gain.exponentialRampToValueAtTime(vol, t0 + 0.01);
+    g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+    o.connect(g).connect(actx.destination); o.start(t0); o.stop(t0 + dur + 0.02);
+  } catch (e) { /* audio unavailable */ }
+}
+const sfx = {
+  click: () => tone(660, 0.06, 'triangle', 0.05),
+  stamp: () => { tone(90, 0.25, 'square', 0.12); tone(60, 0.3, 'sine', 0.12, 0.02); },
+  good: () => { tone(523, 0.12, 'triangle', 0.07); tone(659, 0.12, 'triangle', 0.07, 0.1); tone(784, 0.2, 'triangle', 0.07, 0.2); },
+  bad: () => { tone(220, 0.18, 'sawtooth', 0.05); tone(180, 0.25, 'sawtooth', 0.05, 0.12); },
+  run: () => { for (let i = 0; i < 6; i++) tone(300 + i * 70, 0.07, 'triangle', 0.035, i * 0.08); },
+};
+
+/* ====================================================================
+   Icons (inline SVG, stroke = currentColor)
+   ==================================================================== */
+const ICON = {
+  coin: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16" cy="16" r="6.5" fill="none" stroke="#E57200" stroke-width="2.2"/><path d="M16 12.5v7" stroke="#E57200" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  hand: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M10 17V9.5a2 2 0 0 1 4 0V15m0-7a2 2 0 0 1 4 0v7m0-5a2 2 0 0 1 4 0v8c0 5-3 8-7.5 8S8 24 7 21l-1.5-4a2 2 0 0 1 3.6-1.6L10 17" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  calendar: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><rect x="5" y="7" width="22" height="20" rx="3" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M5 13h22M11 4v6M21 4v6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M11 20l3 3 7-7" fill="none" stroke="#E57200" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  tag: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M5 6h11l11 11-10 10L5 16z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><circle cx="11" cy="12" r="2.4" fill="#E57200"/></svg>',
+  scatter: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M5 5v22h22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><circle cx="10" cy="21" r="2" fill="currentColor"/><circle cx="14" cy="18" r="2" fill="currentColor"/><circle cx="17" cy="19" r="2" fill="currentColor"/><circle cx="20" cy="13" r="2" fill="#E57200"/><circle cx="24" cy="10" r="2" fill="#E57200"/></svg>',
+  person: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><circle cx="16" cy="10" r="5" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M6 27c1.5-6 5.5-9 10-9s8.5 3 10 9" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M22 6l4-2M24 11h4" stroke="#E57200" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  flask: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M12 4h8M13 4v8L6 25a2 2 0 0 0 1.8 3h16.4a2 2 0 0 0 1.8-3L19 12V4" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M9.5 20h13" stroke="#E57200" stroke-width="2.2"/></svg>',
+  tree: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M16 4l8 10h-4l6 8H6l6-8H8z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M16 22v6" stroke="#E57200" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  ruler: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><rect x="4" y="11" width="24" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M9 11v4M14 11v5M19 11v4M24 11v5" stroke="#E57200" stroke-width="2" stroke-linecap="round"/></svg>',
+  chat: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M6 7h20v13H14l-6 5v-5H6z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><path d="M11 12h10M11 16h6" stroke="#E57200" stroke-width="2.2" stroke-linecap="round"/></svg>',
+  eye: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M3 16s5-8 13-8 13 8 13 8-5 8-13 8S3 16 3 16z" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16" cy="16" r="4" fill="#E57200"/></svg>',
+  star: '<svg viewBox="0 0 32 32" class="ic" aria-hidden="true"><path d="M16 4l3.5 7.5 8 1-6 5.5 1.6 8L16 22l-7.1 4 1.6-8-6-5.5 8-1z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>',
+};
+const REVIEWER_FACE = '<svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24" fill="#13203a"/><path d="M14 19l9 3M38 19l-9 3" stroke="#f2f5f9" stroke-width="3" stroke-linecap="round"/><circle cx="19" cy="25" r="2.6" fill="#f2f5f9"/><circle cx="33" cy="25" r="2.6" fill="#f2f5f9"/><path d="M18 37c4-3 12-3 16 0" fill="none" stroke="#f2f5f9" stroke-width="3" stroke-linecap="round"/><text x="26" y="50" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="9" font-weight="700" fill="#d23b3b">R2</text></svg>';
+
+/* ====================================================================
+   Shared design vocabulary
+   ==================================================================== */
+const LABELS = [
+  ['LE', 'Lab experiment'], ['FE', 'Field experiment'], ['NE', 'Natural experiment'], ['QE', 'Quasi-experiment'],
+  ['CS', 'Correlational study'], ['NO', 'Naturalistic observation'], ['CO', 'Controlled observation'], ['CA', 'Case study'],
+];
+const labelName = (code) => (LABELS.find((l) => l[0] === code) || ['', '(none)'])[1];
+
+function correctLabels(m, ch) {
+  const smile = ch.measure === 'smile';
+  switch (ch.alloc) {
+    case 'random': return ch.setting === 'lab' ? ['LE'] : ['FE'];
+    case 'self': return ['QE'];
+    case 'event': return ['NE'];
+    case 'trait': return smile ? ['QE', 'NO'] : ['QE'];
+    case 'none': return smile ? ['CS', 'NO'] : ['CS'];
+    case 'case': return ['CA'];
+    default: return [];
+  }
+}
+function labelExplain(m, ch) {
+  const obs = ch.measure === 'obs' || ch.measure === 'smile';
+  switch (ch.alloc) {
+    case 'random': return `You change the IV and chance decides who gets what, so this is a true experiment: ${ch.setting === 'lab' ? 'in a controlled setting, a lab experiment' : 'in a real-world setting, a field experiment'} (Searle, pp. 12-14).${obs ? ' Watching the children is only how you collect the data, as in Bandura’s Bobo doll study (p. 17).' : ''}`;
+    case 'self': return 'There is an IV, but people picked their own group, so nothing was randomly allocated. That makes it a quasi-experiment, not a true experiment (Searle, pp. 12, 15).';
+    case 'event': return 'A real-world change created the groups, and you controlled neither the change nor who was in each group: a natural experiment (Searle, p. 14).';
+    case 'trait': return `The groups differ by something people already are (age), which nobody can assign: a quasi-experiment (Searle, p. 15).${ch.measure === 'smile' ? ' Because you counted smiles in a park, naturalistic observation is also accepted.' : ''}`;
+    case 'none': return `No IV and no groups: you measured two variables and asked whether they move together. That is a correlational study (Searle, p. 28).${ch.measure === 'smile' ? ' Because the data come from watching people in a park, naturalistic observation is also accepted.' : ''}`;
+    case 'case': return 'One person, studied in depth from many sources: a case study (Searle, p. 24).';
+    default: return '';
+  }
+}
+
+/* measurement helpers */
+function addError(trueVals, rel, r) {
+  const v = variance(trueVals);
+  const sdE = Math.sqrt(v * (1 - rel) / rel);
+  return trueVals.map((t) => t + normal(r) * sdE);
+}
+function sampleForPlot(arr, r, max = 260) {
+  if (arr.length <= max) return arr.slice();
+  return shuffle(arr, r).slice(0, max);
+}
+function binMeans(xs, ys, edges) {
+  const out = [];
+  for (let b = 0; b < edges.length - 1; b++) {
+    const vals = []; let xsum = 0;
+    for (let i = 0; i < xs.length; i++) if (xs[i] >= edges[b] && (xs[i] < edges[b + 1] || (b === edges.length - 2 && xs[i] <= edges[b + 1]))) { vals.push(ys[i]); xsum += xs[i]; }
+    out.push({ lo: edges[b], hi: edges[b + 1], n: vals.length, m: vals.length ? mean(vals) : NaN, x: vals.length ? xsum / vals.length : (edges[b] + edges[b + 1]) / 2 });
+  }
+  return out;
+}
+function wideCI(stats, unitWidth) { return stats && (stats.hi - stats.lo) > unitWidth; }
+function rangeText(stats, d) { return `${fmt(stats.lo, d, true)} to ${fmt(stats.hi, d, true)}`; }
+const assocPos = (res) => !!(res && res.assoc && res.assoc.lo > 0);
+
+/* ====================================================================
+   Missions
+   ==================================================================== */
+const MISSIONS = [
+/* ---------------------------------------------------------------- 1 */
+{
+  id: 'tutor', num: 1, title: 'The AI Tutor', minutes: 11,
+  claim: 'Studying with an AI tutor raises exam scores.',
+  client: 'The Dean of Students may buy an AI tutor license for every first-year. She wants evidence before she signs.',
+  population: '1,200 first-years in a large intro course with 12 discussion sections.',
+  rules: 'Grades are protected records: students must agree before you use them.',
+  hiddenName: 'Motivation',
+  alloc: [
+    { id: 'random', icon: 'coin', title: 'Random allocation', desc: 'A coin flip decides who gets the tutor.' },
+    { id: 'self', icon: 'hand', title: 'Students choose', desc: 'Anyone who wants the tutor signs up for it.' },
+    { id: 'event', icon: 'calendar', title: 'Last year vs. this year', desc: 'This year’s class gets the tutor; last year’s class did not. Compare them.' },
+    { id: 'none', icon: 'scatter', title: 'Measure, don’t assign', desc: 'Survey everyone’s weekly hours of AI use and collect their scores.' },
+  ],
+  settings: [
+    { id: 'lab', icon: 'flask', title: 'Psych lab session', desc: 'One hour: study a chapter with or without the tutor, then a quiz.' },
+    { id: 'field', icon: 'tree', title: 'The real course', desc: 'Students use the tutor (or not) for real during one unit.' },
+  ],
+  settingAllowed: (a, s) => (a === 'event' || a === 'none') ? s === 'field' : true,
+  measures: [
+    { id: 'exam', icon: 'ruler', title: 'Midterm grade from course records', desc: 'Real stakes, written by the instructor.', cost: 4, chips: ['Realism: high', 'Reliability: high'], ok: (ch) => ch.setting === 'field' },
+    { id: 'quiz', icon: 'ruler', title: 'Your own 15-question quiz', desc: 'You write it, so it matches the chapter exactly.', cost: 8, chips: ['Realism: medium', 'Reliability: medium'], ok: () => true },
+    { id: 'selfrep', icon: 'chat', title: '“How much did you learn?” (1 to 7)', desc: 'One question. Quick and cheap.', cost: 1, chips: ['Realism: low', 'Reliability: low'], ok: () => true },
+  ],
+  safeguards: [
+    { id: 'consent', title: 'Consent and debrief', desc: 'Everyone agrees to take part and learns the purpose afterward.', cost: 2, ok: () => true },
+    { id: 'script', title: 'Standard script', desc: 'Every lab session gets the same instructions and timing.', cost: 3, ok: (ch) => ch.setting === 'lab' },
+    { id: 'pilot', title: 'Pilot the quiz', desc: 'Try it on 10 students first and fix the confusing items.', cost: 4, ok: (ch) => ch.measure === 'quiz' },
+    { id: 'everyone', title: 'Tutor for everyone afterward', desc: 'The comparison group gets the tutor as soon as the study ends.', cost: 3, ok: (ch) => ch.alloc === 'random' && ch.setting === 'field' },
+  ],
+  nRange: (ch) => ch.setting === 'lab' ? { min: 20, max: 200, step: 10, def: 80 } : { min: 40, max: 1200, step: 20, def: 300 },
+  costs(ch) {
+    const fixed = { random: { lab: 10, field: 25 }, self: { lab: 8, field: 5 }, event: { field: 5 }, none: { field: 3 } };
+    const per = ch.setting === 'lab' ? 0.35 : 0.05;
+    return [
+      { k: 'Setup', v: (fixed[ch.alloc] || {})[ch.setting] || 0 },
+      { k: `${ch.n} participants × ${per}`, v: ch.n * per },
+    ];
+  },
+  ethics(ch) {
+    const out = [];
+    if (!ch.safe.includes('consent')) out.push({ s: 'revise', t: 'Consent is missing', x: 'Students must agree to take part, and grades cannot be used without permission. Add consent and debrief.' });
+    else out.push({ s: 'ok', t: 'Consent and debrief', x: 'Participants agree first and hear the purpose afterward.' });
+    if (ch.alloc === 'random' && ch.setting === 'field' && !ch.safe.includes('everyone')) out.push({ s: 'revise', t: 'Fairness', x: 'Half of a real class would study without a tool the other half gets, during a graded unit. Promise the tutor to the comparison group as soon as the study ends.' });
+    if (out.every((o) => o.s === 'ok')) out.push({ s: 'ok', t: 'Risk', x: 'Minimal risk: studying with or without a tutor.' });
+    return out;
+  },
+  params(r) { return { tau: 2 + 2 * r(), delta: 3 + 4 * r() }; },
+  simulate(ch, r, P) {
+    const n = ch.n, lab = ch.setting === 'lab';
+    const rel = ch.measure === 'exam' ? 0.85 : ch.measure === 'quiz' ? (ch.safe.includes('pilot') ? 0.8 : 0.7) : 0.55;
+    const eSD = lab && ch.safe.includes('script') ? 6.5 : 8;
+    const tauEff = lab ? P.tau * 2.4 : (ch.measure === 'quiz' ? P.tau * 1.2 : P.tau);
+    const M = Array.from({ length: n }, () => normal(r));
+    const session = Array.from({ length: Math.ceil(n / 10) }, () => (lab && !ch.safe.includes('script') ? normal(r) * 3 : 0));
+    const measureY = (T, extra, i) => {
+      if (ch.measure === 'selfrep') return 4 + 0.45 * M[i] + 0.8 * T + 0.08 * P.tau * T + 0.06 * extra + normal(r) * 0.9;
+      return 72 + 7 * M[i] + tauEff * T + extra + session[Math.floor(i / 10)] + normal(r) * eSD;
+    };
+    const finish = (vals) => {
+      let y = addError(vals, rel, r);
+      if (ch.measure === 'selfrep') y = y.map((v) => clamp(Math.round(v), 1, 7));
+      else y = y.map((v) => clamp(v, 0, 100));
+      return y;
+    };
+    const unit = ch.measure === 'selfrep' ? 'rating points' : 'points';
+    const yName = ch.measure === 'exam' ? 'Midterm score' : ch.measure === 'quiz' ? 'Quiz score (%)' : 'Self-rated learning (1 to 7)';
+    const d = ch.measure === 'selfrep' ? 2 : 1;
+    if (ch.alloc === 'none') {
+      const H = M.map((m) => Math.max(0, 2.5 + 1.5 * m + normal(r) * 1.6));
+      const yt = H.map((h, i) => (ch.measure === 'selfrep' ? measureY(0, h * 2.5, i) : measureY(0, (P.tau / 3) * h, i)));
+      const y = finish(yt);
+      const stats = corrCI(H, y);
+      const pts = H.map((h, i) => ({ x: h, y: y[i], h: M[i] }));
+      return { kind: 'scatter', xName: 'AI use (hours per week)', yName, stats, assoc: stats, data: sampleForPlot(pts, r), n, d, unit,
+        hiddenStat: corr(M, H), trueEffect: ch.measure === 'selfrep' ? 0.15 : P.tau / 3 };
+    }
+    let T;
+    if (ch.alloc === 'random') T = shuffle(Array.from({ length: n }, (_, i) => (i < n / 2 ? 1 : 0)), r);
+    else if (ch.alloc === 'self') T = M.map((m) => (r() < logistic(1.6 * m - 0.2) ? 1 : 0));
+    else T = Array.from({ length: n }, (_, i) => (i < n / 2 ? 1 : 0)); // event: first half is this year's class
+    const extra = T.map((t) => (ch.alloc === 'event' && ch.measure !== 'selfrep' ? P.delta * t : 0));
+    const yt = T.map((t, i) => measureY(t, extra[i], i));
+    const y = finish(yt);
+    const a = [], b = [], ha = [], hb = [];
+    T.forEach((t, i) => { if (t) { a.push(y[i]); ha.push(M[i]); } else { b.push(y[i]); hb.push(M[i]); } });
+    const stats = diffCI(a, b);
+    const pts = T.map((t, i) => ({ g: t, y: y[i], h: M[i] }));
+    const labels = ch.alloc === 'event' ? ['Last year (no tutor)', 'This year (tutor)'] : ['No tutor', 'Tutor'];
+    return { kind: 'groups', labels, yName, stats, assoc: stats, data: sampleForPlot(pts, r), n, d, unit,
+      hiddenStat: [mean(hb), mean(ha)], trueEffect: ch.measure === 'selfrep' ? 0.8 + 0.08 * P.tau : tauEff };
+  },
+  claims: [
+    { id: 'c1', text: 'In our data, more tutor use went with higher results on our measure.',
+      sup: (ch, res) => assocPos(res),
+      why: (ch, res, ok) => ok ? 'Your own data show it: the likely range sits above zero. This only describes your data, so any design can support it.' : 'Your likely range includes zero (or sits below it), so your own data do not show this.' },
+    { id: 'c2', text: 'Using the tutor caused the difference we found.',
+      sup: (ch, res) => ch.alloc === 'random' && assocPos(res),
+      why: (ch, res, ok) => {
+        if (ch.alloc === 'random') return ok ? 'Random allocation spread motivation (and everything else) evenly, so the tutor is the only systematic difference between the groups.' : 'Random allocation was the right move, but your likely range includes zero, so the difference could be noise.';
+        const why = { self: 'Students who chose the tutor were more motivated to begin with.', event: 'Last year’s class had different students and a different midterm.', none: 'A correlation cannot tell which way the arrow points, or rule out a third variable such as motivation.' }[ch.alloc];
+        return `No random allocation, so other differences could explain the result. ${why}`;
+      } },
+    { id: 'c3', text: 'Giving every first-year the tutor would raise their real exam grades.',
+      sup: (ch, res) => ch.alloc === 'random' && ch.setting === 'field' && ch.measure === 'exam' && assocPos(res),
+      why: (ch, res, ok) => {
+        if (ok) return 'Random allocation in the real course, measured on the real midterm. This is the claim the Dean needs, and your design earns it.';
+        if (ch.alloc !== 'random') return 'This is a causal claim, and your design did not randomly allocate anyone.';
+        if (ch.setting === 'lab') return 'A one-hour lab quiz is not a real exam. Lab effects can be larger than real-world effects (low ecological validity, Searle p. 13).';
+        if (ch.measure !== 'exam') return 'You measured something other than real exam grades, so you cannot speak for real exams.';
+        return 'Right design, but your likely range includes zero.';
+      } },
+    { id: 'c4', text: 'Our design rules out motivation as an explanation.',
+      sup: (ch) => ch.alloc === 'random',
+      why: (ch, res, ok) => ok ? 'Yes. With random allocation, motivated and unmotivated students end up in both groups by chance.' : 'No. Without random allocation, motivated students could be over-represented in one group (or among heavy AI users).' },
+  ],
+  reviewer(ch, res) {
+    const L = [];
+    if (ch.alloc === 'self') L.push('You let students pick the tutor. The motivated ones picked it. Congratulations: you may have measured motivation.');
+    if (ch.alloc === 'event') L.push('Last year’s class took a different midterm with different classmates. Your “tutor effect” includes all of that.');
+    if (ch.alloc === 'none') L.push('Heavy AI users score higher. Do motivated students use more AI, or does AI raise scores? Your design cannot tell.');
+    if (ch.setting === 'lab') L.push('One hour with a chapter you picked for them is not a semester. Ecological validity is on line one.');
+    if (ch.measure === 'selfrep') L.push('You asked people whether they learned. Feeling that you learned is not the same as scoring higher.');
+    if (ch.setting === 'lab' && !ch.safe.includes('script')) L.push('Every lab session got slightly different instructions. That is noise you paid for.');
+    if (res.kind === 'groups' && wideCI(res.stats, ch.measure === 'selfrep' ? 1 : 8)) L.push(`Your likely range runs from ${rangeText(res.stats, res.d)}. That is a shrug, not a finding. More people would narrow it.`);
+    if (ch.alloc === 'random' && ch.setting === 'field' && ch.measure === 'exam') L.push({ praise: true, t: 'Random allocation, the real course, the real midterm. I hate to say it, but this is solid.' });
+    else if (ch.alloc === 'random') L.push({ praise: true, t: 'Random allocation: fine, you may talk about cause. Just be careful about where it applies.' });
+    return L.slice(0, 3);
+  },
+  truth(ch, res, P) {
+    let t = `In this world the tutor really helps: about <b>${fmt(P.tau, 1, true)} points</b> on a real midterm, and about ${fmt(P.tau * 2.4, 1, true)} on a one-hour lab quiz (the lab is short and focused, so its effect is bigger than real life). Students also differ in <b>motivation</b>, which you could not see: one standard deviation of motivation is worth about 7 points, and motivated students were more likely to choose the tutor or use more AI.`;
+    if (ch.alloc === 'event') t += ` And this year’s midterm happened to be <b>${fmt(P.delta, 1)} points easier</b> than last year’s.`;
+    return t;
+  },
+},
+/* ---------------------------------------------------------------- 2 */
+{
+  id: 'age', num: 2, title: 'Happiness Over a Lifetime', minutes: 10,
+  claim: 'People get happier as they get older.',
+  client: 'A podcast host is recording an episode on aging. She will quote any headline you can defend on air.',
+  population: 'Adults aged 18 to 80 in Charlottesville.',
+  rules: 'Nobody can be assigned an age.',
+  hiddenName: 'Social connection',
+  alloc: [
+    { id: 'random', icon: 'coin', title: 'Random allocation', desc: 'Randomly assign each person to be young or old.' },
+    { id: 'trait', icon: 'tag', title: 'Compare two age groups', desc: 'Recruit 20 to 29 year-olds and 65 to 75 year-olds.' },
+    { id: 'none', icon: 'scatter', title: 'Every age, one survey', desc: 'Sample adults from 18 to 80 and relate age to happiness.' },
+    { id: 'case', icon: 'person', title: 'One remarkable life', desc: 'Spend the budget on one 100-year-old: interviews, letters, family.' },
+  ],
+  settings: [
+    { id: 'lab', icon: 'flask', title: 'Come to the lab', desc: 'Participants visit the psychology building on a weekday.' },
+    { id: 'field', icon: 'tree', title: 'Meet people where they are', desc: 'Online, at community centers, in parks.' },
+  ],
+  settingAllowed: (a, s) => (a === 'case' ? s === 'field' : true),
+  measures: [
+    { id: 'scale', icon: 'ruler', title: 'Happiness scale (5 items)', desc: 'A published questionnaire, scored 1 to 5.', cost: 3, chips: ['Reliability: high'], ok: (ch) => ch.alloc !== 'case' },
+    { id: 'oneq', icon: 'chat', title: '“How happy are you?” (1 to 10)', desc: 'One question.', cost: 1, chips: ['Reliability: low'], ok: (ch) => ch.alloc !== 'case' },
+    { id: 'smile', icon: 'eye', title: 'Count smiles in public', desc: 'Observers count each person’s smiles in 10 minutes at a park.', cost: 10, chips: ['Behavior, not self-report'], ok: (ch) => ch.setting === 'field' && ch.alloc !== 'case' },
+    { id: 'interview', icon: 'chat', title: 'Long interviews and records', desc: 'Hours of conversation, letters, photos, family.', cost: 20, chips: ['Depth: very high'], ok: (ch) => ch.alloc === 'case' },
+  ],
+  safeguards: [
+    { id: 'consent', title: 'Consent and debrief', desc: 'Everyone agrees to take part and learns the purpose afterward.', cost: 2, ok: () => true },
+    { id: 'checklist', title: 'Smile checklist and two coders', desc: 'A written definition of a smile; two people code every person.', cost: 8, ok: (ch) => ch.measure === 'smile' },
+    { id: 'script', title: 'Standard script', desc: 'Every lab session gets the same instructions.', cost: 3, ok: (ch) => ch.setting === 'lab' },
+  ],
+  nRange: (ch) => ch.alloc === 'case' ? null : (ch.setting === 'lab' ? { min: 20, max: 240, step: 10, def: 100 } : { min: 40, max: 800, step: 20, def: 300 }),
+  costs(ch) {
+    if (ch.alloc === 'case') return [{ k: 'One participant, many hours', v: 60 }];
+    const fixed = { random: 5, trait: 5, none: 5 }[ch.alloc] || 0;
+    const per = ch.setting === 'lab' ? 0.3 : 0.08;
+    return [{ k: 'Setup', v: fixed }, { k: `${ch.n} participants × ${per}`, v: ch.n * per }];
+  },
+  ethics(ch) {
+    if (ch.alloc === 'random') return [{ s: 'reject', t: 'Impossible design', x: 'Nobody can be assigned an age. The board asks whether your budget includes a time machine. Pick a design that works with the ages people already have.' }];
+    const out = [];
+    if (ch.measure === 'smile' && !ch.safe.includes('consent')) out.push({ s: 'ok', t: 'Observation in public', x: 'Watching people in a park, where they expect to be seen by strangers, is acceptable without consent, as long as you record no names (Searle, p. 20).' });
+    else if (!ch.safe.includes('consent')) out.push({ s: 'revise', t: 'Consent is missing', x: 'Anyone who answers your questions must agree to take part first. Add consent and debrief.' });
+    else out.push({ s: 'ok', t: 'Consent and debrief', x: 'Participants agree first and hear the purpose afterward.' });
+    if (ch.alloc === 'case') out.push({ s: 'ok', t: 'Privacy', x: 'Approved, if her name and identifying details are changed in anything you publish.' });
+    else out.push({ s: 'ok', t: 'Risk', x: 'Minimal risk: questions about mood, or being seen smiling in a park.' });
+    return out;
+  },
+  params(r) { return { amp: 1.1 + 0.3 * r(), conn: 0.3 + 0.15 * r() }; },
+  simulate(ch, r, P) {
+    if (ch.alloc === 'case') {
+      return { kind: 'case', n: 1, quotes: [
+        'I was happiest at seventy-five. My knees were worse, but I had stopped worrying about what people thought of me.',
+        'Forty-five was the hardest year. Two teenagers, my mother sick, a mortgage. I don’t think I smiled once that spring.',
+        'People ask for my secret. I tell them: the Tuesday card game. Fifty-one years with the same four women.',
+      ], note: 'Rich, specific, and memorable. Also one person, remembering, and possibly describing the life she wishes she had lived.' };
+    }
+    const n = ch.n, lab = ch.setting === 'lab';
+    const ages = Array.from({ length: n }, (_, i) => {
+      if (ch.alloc === 'trait') return i < n / 2 ? 20 + r() * 9.99 : 65 + r() * 10;
+      return 18 + r() * 62;
+    });
+    const S = ages.map((a) => 0.025 * (a - 48) + (lab && a >= 60 ? 0.5 : 0) + normal(r));
+    const z = ages.map((a, i) => P.amp * Math.pow((a - 48) / 30, 2) + P.conn * S[i] + normal(r) * 0.75 + (lab && !ch.safe.includes('script') ? normal(r) * 0.3 : 0));
+    let y, yName, d;
+    if (ch.measure === 'scale') { y = addError(z.map((v) => 3.3 + 0.55 * v), 0.85, r).map((v) => clamp(v, 1, 5)); yName = 'Happiness scale (1 to 5)'; d = 2; }
+    else if (ch.measure === 'oneq') { y = addError(z.map((v) => 6.4 + 1.3 * v), 0.55, r).map((v) => clamp(Math.round(v), 1, 10)); yName = 'How happy (1 to 10)'; d = 2; }
+    else { const rel = ch.safe.includes('checklist') ? 0.75 : 0.45; y = addError(z.map((v) => 3 + 1.1 * v), rel, r).map((v) => Math.max(0, Math.round(v))); yName = 'Smiles in 10 minutes'; d = 2; }
+    const old = [], young = [], hOld = [], hYoung = [];
+    ages.forEach((a, i) => { if (a >= 60) { old.push(y[i]); hOld.push(S[i]); } else if (a < 30) { young.push(y[i]); hYoung.push(S[i]); } });
+    const oy = diffCI(old, young);
+    if (ch.alloc === 'trait') {
+      const pts = ages.map((a, i) => ({ g: a >= 60 ? 1 : 0, y: y[i], h: S[i] }));
+      return { kind: 'groups', labels: ['Ages 20 to 29', 'Ages 65 to 75'], yName, stats: oy, assoc: oy, data: sampleForPlot(pts, r), n, d, unit: 'points', hiddenStat: [mean(hYoung), mean(hOld)] };
+    }
+    const stats = corrCI(ages, y);
+    const bins = binMeans(ages, y, [18, 28, 38, 48, 58, 68, 80]);
+    const pts = ages.map((a, i) => ({ x: a, y: y[i], h: S[i] }));
+    return { kind: 'scatter', xName: 'Age (years)', yName, stats, assoc: oy, bins, data: sampleForPlot(pts, r), n, d, unit: 'points', hiddenStat: corr(S, ages), sdY: Math.sqrt(variance(y)) };
+  },
+  claims: [
+    { id: 'c1', text: 'In our sample, the older adults were happier than the younger adults.',
+      sup: (ch, res) => res.kind !== 'case' && assocPos(res),
+      why: (ch, res, ok) => res.kind === 'case' ? 'You studied one person. There are no older and younger adults to compare.' : (ok ? `Your own data show it: older minus younger is ${fmt(res.assoc.est, 2, true)}, likely range ${rangeText(res.assoc, 2)}. This describes your sample only.` : 'In your data the likely range for older minus younger includes zero (or sits below it).') },
+    { id: 'c2', text: 'Getting older makes people happier.',
+      sup: () => false,
+      why: () => 'Age cannot be randomly allocated, so age arrives bundled with everything that comes with it: generation, health, free time, social connection. No design available here can support this causal claim (Searle, p. 15).' },
+    { id: 'c3', text: 'Age and happiness are unrelated.',
+      sup: () => false,
+      why: (ch, res) => res.kind === 'scatter' ? 'Look at the binned averages: the dots form a curve, high at both ends and low in the middle. A correlation near zero can hide a curvilinear relationship, which is why Searle says to always draw the scattergram (p. 29).' : res.kind === 'groups' ? 'Two age groups cannot show the shape of the relationship. You never measured anyone between 30 and 64.' : 'One person cannot show a relationship between two variables.' },
+    { id: 'c4', text: 'Middle-aged adults were the least happy people in our sample.',
+      sup: (ch, res) => {
+        if (res.kind !== 'scatter') return false;
+        const ms = res.bins.map((b) => b.m), min = Math.min(...ms), idx = ms.indexOf(min);
+        return (idx === 2 || idx === 3) && Math.min(ms[0], ms[5]) - min > 0.2 * res.sdY && res.bins.every((b) => b.n >= 8);
+      },
+      why: (ch, res, ok) => res.kind === 'scatter' ? (ok ? 'Yes: your binned averages dip in the 38 to 57 range. This describes your sample; it says nothing about why.' : 'Your binned averages do not show a clear dip in middle age, so your data do not support this.') : (res.kind === 'groups' ? 'You never sampled middle-aged adults, so your data cannot say anything about them.' : 'One person cannot tell you about middle-aged adults in general.') },
+  ],
+  reviewer(ch, res) {
+    const L = [];
+    if (ch.alloc === 'case') L.push('A fascinating life. A sample of one. You cannot quote her as a trend.');
+    if (ch.alloc === 'trait') L.push('You compared 25-year-olds with 70-year-olds and skipped everyone in between. What happens at 45?');
+    if (res.kind === 'scatter' && Math.abs(res.stats.est) < 0.3) L.push(`Your r is ${fmtR(res.stats.est)}. Before you announce “no relationship,” look at the shape of the dots.`);
+    if (ch.setting === 'lab') L.push('The 70-year-olds who can come to the psych building on a Tuesday may be the most active, social ones in town.');
+    if (ch.measure === 'oneq') L.push('One question, ten options, a lot of noise. Its reliability is about .55.');
+    if (ch.measure === 'smile' && !ch.safe.includes('checklist')) L.push('Your two observers disagreed about what counts as a smile. Is a smirk a smile? Operationalise it.');
+    if (ch.measure === 'smile') L.push('People smile at dogs. Is smiling in a park the same thing as being happy with your life?');
+    if (ch.alloc === 'none' || ch.alloc === 'trait') L.push('Whatever comes with age (generation, health, free time) came along for free. Age was never the only difference.');
+    return L.slice(0, 3);
+  },
+  truth(ch, res, P) {
+    return `In this world, happiness follows a <b>U-shape</b>: high in the twenties, lowest around age 48, high again after 65. Older adults also have more <b>social connection</b> (more time, longer friendships), which you could not see and which raises happiness on its own. A gap between young and old mixes age with everything that comes with it.${ch.setting === 'lab' ? ' Your lab sample also over-recruited the most social older adults.' : ''}`;
+  },
+},
+/* ---------------------------------------------------------------- 3 */
+{
+  id: 'games', num: 3, title: 'Game On?', minutes: 10,
+  claim: 'Violent video games make children more aggressive.',
+  client: 'A parents’ association is deciding whether to campaign for a ban on violent games at after-school programs.',
+  population: 'Children aged 8 to 12 at after-school programs, with parents’ permission.',
+  rules: 'Children are a protected group. The ethics board is strict.',
+  hiddenName: 'Home supervision',
+  alloc: [
+    { id: 'random', icon: 'coin', title: 'Random allocation', desc: 'A coin flip decides which game each child plays.' },
+    { id: 'self', icon: 'hand', title: 'Kids pick the game', desc: 'Each child chooses the violent game or the racing game.' },
+    { id: 'none', icon: 'scatter', title: 'Measure, don’t assign', desc: 'Ask parents how many hours of violent games their child plays each week.' },
+  ],
+  settings: [
+    { id: 'lab', icon: 'flask', title: 'Playroom session', desc: 'Twenty minutes of a cartoon-violence game or a racing game, then 15 minutes of free play.' },
+    { id: 'field', icon: 'tree', title: 'Everyday life', desc: 'Games at home over months; behavior measured at school.' },
+  ],
+  settingAllowed: (a, s) => (a === 'self' ? s === 'lab' : a === 'none' ? s === 'field' : true),
+  measures: [
+    { id: 'obs', icon: 'eye', title: 'Observe free play', desc: 'Observers count aggressive acts during 15 minutes of play.', cost: 8, chips: ['Behavior', 'Needs a definition'], ok: (ch) => ch.setting === 'lab' },
+    { id: 'teacher', icon: 'ruler', title: 'Teacher rating (0 to 100)', desc: 'Teachers rate each child’s aggression at school.', cost: 4, chips: ['Reliability: medium'], ok: (ch) => ch.setting === 'field' },
+    { id: 'parent', icon: 'chat', title: 'Parent rating (0 to 100)', desc: 'Parents rate their own child.', cost: 1, chips: ['Reliability: low'], ok: (ch) => ch.setting === 'field' },
+  ],
+  safeguards: [
+    { id: 'consent', title: 'Parent consent, child assent, debrief', desc: 'Parents agree, children agree, everyone hears the purpose afterward.', cost: 3, ok: () => true },
+    { id: 'checklist', title: 'Written checklist and two coders', desc: 'Define exactly what counts as an aggressive act; two people code every child.', cost: 6, ok: (ch) => ch.measure === 'obs' },
+    { id: 'blind', title: 'Coders blind to condition', desc: 'The people counting acts do not know which game the child played.', cost: 5, ok: (ch) => ch.measure === 'obs' },
+    { id: 'script', title: 'Standard script', desc: 'Every session runs the same way, same toys, same timing.', cost: 3, ok: (ch) => ch.setting === 'lab' },
+  ],
+  nRange: (ch) => ch.setting === 'lab' ? { min: 20, max: 150, step: 10, def: 60 } : { min: 40, max: 800, step: 20, def: 300 },
+  costs(ch) {
+    const fixed = { random: { lab: 12, field: 20 }, self: { lab: 10 }, none: { field: 4 } };
+    const per = ch.setting === 'lab' ? 0.55 : 0.08;
+    return [{ k: 'Setup', v: (fixed[ch.alloc] || {})[ch.setting] || 0 }, { k: `${ch.n} children × ${per}`, v: ch.n * per }];
+  },
+  ethics(ch) {
+    const out = [];
+    if (ch.alloc === 'random' && ch.setting === 'field') out.push({ s: 'reject', t: 'Possible harm', x: 'Assigning children to months of violent games at home risks harm, and parents would refuse. Rejected. A short, supervised session is as far as the board will go.' });
+    if (!ch.safe.includes('consent')) out.push({ s: 'revise', t: 'Consent is missing', x: 'Children cannot consent alone: you need parents’ consent, the child’s own agreement, and a debrief.' });
+    else out.push({ s: 'ok', t: 'Consent, assent, and debrief', x: 'Parents agree, children agree, and everyone hears the purpose afterward.' });
+    if (!out.some((o) => o.s === 'reject')) out.push({ s: 'ok', t: 'Risk', x: ch.setting === 'lab' ? 'Twenty minutes of a cartoon game, with staff present: minimal risk.' : 'A survey of home habits: minimal risk.' });
+    return out;
+  },
+  params(r) { return { kappa: 0.8 + 0.6 * r() }; },
+  simulate(ch, r, P) {
+    const n = ch.n;
+    const S = Array.from({ length: n }, () => normal(r));
+    const A0 = S.map((s) => -0.55 * s + normal(r) * 0.85);
+    if (ch.alloc === 'none') {
+      const G = S.map((s) => Math.max(0, 4 - 1.6 * s + normal(r) * 2));
+      const yt = A0.map((a, i) => 40 + 9 * a + 0.15 * G[i] + normal(r) * 6);
+      const rel = ch.measure === 'teacher' ? 0.75 : 0.55;
+      const y = addError(yt, rel, r).map((v) => clamp(v, 0, 100));
+      const stats = corrCI(G, y);
+      const pts = G.map((g, i) => ({ x: g, y: y[i], h: S[i] }));
+      return { kind: 'scatter', xName: 'Violent games at home (hours per week)', yName: ch.measure === 'teacher' ? 'Teacher-rated aggression' : 'Parent-rated aggression', stats, assoc: stats, data: sampleForPlot(pts, r), n, d: 1, unit: 'points', hiddenStat: corr(S, G), trueEffect: 0.15 };
+    }
+    const T = ch.alloc === 'random' ? shuffle(Array.from({ length: n }, (_, i) => (i < n / 2 ? 1 : 0)), r) : A0.map((a) => (r() < logistic(1.3 * a) ? 1 : 0));
+    const session = Array.from({ length: Math.ceil(n / 6) }, () => (ch.safe.includes('script') ? 0 : normal(r) * 0.6));
+    const yt = T.map((t, i) => 3 + 1.1 * A0[i] + P.kappa * t + session[Math.floor(i / 6)] + normal(r) * 1.0);
+    const rel = ch.safe.includes('checklist') ? 0.8 : 0.45;
+    const bias = ch.safe.includes('blind') ? 0 : 0.5;
+    const y = addError(yt, rel, r).map((v, i) => Math.max(0, Math.round(v + bias * T[i])));
+    const a = [], b = [], ha = [], hb = [];
+    T.forEach((t, i) => { if (t) { a.push(y[i]); ha.push(S[i]); } else { b.push(y[i]); hb.push(S[i]); } });
+    const stats = diffCI(a, b);
+    const pts = T.map((t, i) => ({ g: t, y: y[i], h: S[i] }));
+    return { kind: 'groups', labels: ['Racing game', 'Violent game'], yName: 'Aggressive acts in 15 minutes', stats, assoc: stats, data: sampleForPlot(pts, r), n, d: 2, unit: 'acts', hiddenStat: [mean(hb), mean(ha)], trueEffect: P.kappa, bias };
+  },
+  claims: [
+    { id: 'c1', text: 'Right after playing, kids in the violent-game group showed more aggressive acts than kids in the other group.',
+      sup: (ch, res) => ch.setting === 'lab' && assocPos(res),
+      why: (ch, res, ok) => ch.setting !== 'lab' ? 'You did not run a play session, so you have no data about behavior right after playing.' : (ok ? 'Your own data show it: the likely range sits above zero. This describes your data only.' : 'Your likely range includes zero, so your data do not show a clear difference.') },
+    { id: 'c2', text: 'The violent game caused a short-term increase in aggressive play.',
+      sup: (ch, res) => ch.alloc === 'random' && ch.setting === 'lab' && ch.safe.includes('blind') && assocPos(res),
+      why: (ch, res, ok) => {
+        if (ok) return 'Random allocation plus coders who did not know the condition. The game is the only systematic difference, so a short-term causal claim holds.';
+        if (ch.alloc === 'self') return 'The children chose their games, and the rowdier children tended to pick the violent one. No random allocation, no causal claim.';
+        if (ch.alloc === 'none') return 'You surveyed home habits; nothing was manipulated, so you cannot claim cause.';
+        if (!ch.safe.includes('blind')) return 'Your coders knew which game each child played. Observer bias alone could produce the gap (Searle, p. 19).';
+        return 'Right design, but your likely range includes zero. The difference could be noise.';
+      } },
+    { id: 'c3', text: 'Violent games cause long-term aggression in children.',
+      sup: () => false,
+      why: () => 'The only design that could test this (random allocation to months of violent games) was rejected by the ethics board. A 20-minute session cannot speak for months, and a survey cannot establish cause.' },
+    { id: 'c4', text: 'Kids who play more violent games at home are rated as more aggressive.',
+      sup: (ch, res) => ch.alloc === 'none' && assocPos(res),
+      why: (ch, res, ok) => ch.alloc !== 'none' ? 'You never measured game playing at home.' : (ok ? 'Your own data show it: a positive correlation with a likely range above zero. It describes the relationship; it does not explain it.' : 'Your likely range includes zero, so your data do not show it.') },
+  ],
+  reviewer(ch, res) {
+    const L = [];
+    if (ch.alloc === 'self') L.push('The kids who picked the violent game were probably the rowdier kids to begin with.');
+    if (ch.measure === 'obs' && !ch.safe.includes('blind')) L.push('Your observers knew who played the violent game. Do you think that changed what they counted as a push?');
+    if (ch.measure === 'obs' && !ch.safe.includes('checklist')) L.push('What counted as an aggressive act? A high-five? A shove? Without a written checklist your coders agreed about half the time.');
+    if (ch.alloc === 'none') L.push('Kids with less supervision at home play more violent games and also act out more. Supervision could drive both.');
+    if (ch.measure === 'parent') L.push('Parents rating their own kids: reliability about .55, and some parents see what they want to see.');
+    if (ch.setting === 'lab') L.push('Twenty minutes of a cartoon game is not three years of gaming. Keep your claim that small.');
+    if (res.kind === 'groups' && wideCI(res.stats, 1.6)) L.push(`Your likely range runs from ${rangeText(res.stats, 2)} acts. More children would narrow it.`);
+    if (ch.alloc === 'random' && ch.safe.includes('blind') && ch.safe.includes('checklist')) L.unshift({ praise: true, t: 'Random allocation, blind coders, a written checklist. Bandura would approve.' });
+    return L.slice(0, 3);
+  },
+  truth(ch, res, P) {
+    let t = `In this world, 20 minutes of the violent game adds about <b>${fmt(P.kappa, 2)} aggressive acts</b> in the next 15 minutes of play, and the effect fades within the hour. Over months, game hours barely matter (0.15 rating points per weekly hour). <b>Home supervision</b>, which you could not see, lowers both game hours and aggression, so it builds a correlation all by itself.`;
+    if (res.bias) t += ' Your coders also added about half an act to the violent-game group, just by knowing which game the child played.';
+    return t;
+  },
+},
+];
+
+/* ====================================================================
+   State
+   ==================================================================== */
+const freshMission = () => ({ ch: { alloc: null, setting: null, measure: null, n: null, safe: [] }, label: '', attempts: 0, approved: false, labelOk: null, labelSubmitted: '', firstPass: false, ran: false, marks: {}, submitted: false, revealHidden: false });
+let state = {
+  screen: 'start', ids: [], team: '', startedAt: null, mission: 0, round: 0, sound: true,
+  missions: MISSIONS.map(freshMission), refl: ['', ''], finishedAt: null,
+};
+function save() { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { /* storage unavailable */ } }
+function load() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STORE) || 'null');
+    if (s && s.missions && s.missions.length === MISSIONS.length) state = Object.assign(state, s);
+  } catch (e) { /* ignore */ }
+}
+const teamKey = () => state.ids.map((s) => s.toLowerCase()).sort().join('+');
+const paramsFor = (m) => m.params(makeRng(fnv(`${teamKey()}|${m.id}|params|${SALT}`)));
+function designSig(ch) { return [ch.alloc, ch.setting, ch.measure, ch.n, ch.safe.slice().sort().join('+')].join('.'); }
+/* Round 0 is the first play; round 1 is the optional replay with a different design. */
+const roundObj = (i, r = state.round) => (r === 1 ? state.missions[i].replay || null : state.missions[i]);
+function resultFor(i, r = state.round) {
+  const m = MISSIONS[i], st = roundObj(i, r);
+  if (!st || !st.ran) return null;
+  // The seed does not depend on the design: both rounds draw the same simulated people wherever the
+  // designs allow, so a difference between rounds comes from the design, not from a new sample.
+  const rng = makeRng(fnv(`${teamKey()}|${m.id}|data|${SALT}`));
+  return m.simulate(st.ch, rng, paramsFor(m));
+}
+function currentRound(i) {
+  if (state.round === 1 && !state.missions[i].replay) state.round = 0;
+  return roundObj(i);
+}
+
+/* ====================================================================
+   Header: progress pips, clock, sound
+   ==================================================================== */
+function renderPips() {
+  const items = [['start', 'Team'], ...MISSIONS.map((m, i) => [`m${i}`, `Mission ${m.num}`]), ['ticket', 'Exit ticket']];
+  const cur = state.screen === 'start' ? 'start' : state.screen === 'ticket' ? 'ticket' : `m${state.mission}`;
+  const order = items.map((x) => x[0]);
+  $('#pips').innerHTML = items.map(([k, t]) => {
+    const done = order.indexOf(k) < order.indexOf(cur) || (k.startsWith('m') && state.missions[Number(k.slice(1))].submitted && k !== cur);
+    return `<span class="pip ${k === cur ? 'now' : done ? 'done' : ''}">${t}</span>`;
+  }).join('');
+}
+function tickClock() {
+  const el = $('#clock');
+  if (!state.startedAt) { el.textContent = '0:00'; return; }
+  const end = state.finishedAt || Date.now();
+  const s = Math.max(0, Math.floor((end - state.startedAt) / 1000));
+  el.textContent = `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+  el.classList.toggle('late', s > (TARGET_MIN - 8) * 60 && !state.finishedAt);
+  el.title = `Time since you started. Aim to reach the exit ticket by minute ${TARGET_MIN - 5}.`;
+}
+setInterval(tickClock, 1000);
+function announce(msg) { const l = $('#live'); l.textContent = ''; setTimeout(() => { l.textContent = msg; }, 30); }
+
+/* ====================================================================
+   Router
+   ==================================================================== */
+function go(screen, opts = {}) {
+  state.screen = screen; save(); render();
+  if (!opts.keepScroll) window.scrollTo({ top: 0, behavior: 'auto' });
+  $('#app').focus({ preventScroll: true });
+}
+function render() {
+  renderPips(); tickClock();
+  const s = state.screen;
+  if (s === 'start') return renderStart();
+  if (s === 'design') return renderDesign();
+  if (s === 'results') return renderResults();
+  if (s === 'ticket') return renderTicket();
+  renderStart();
+}
+
+/* ====================================================================
+   Screen: start
+   ==================================================================== */
+const TEAM_NAMES = ['The Confounders', 'Random Allocators', 'Demand Characteristics', 'The Scattergrams', 'Blind Coders', 'Inter-Judge Agreement', 'Ecological Validity', 'Reviewer 3', 'The Control Group', 'Operational Definitions'];
+function renderStart() {
+  const resume = state.startedAt && state.screen === 'start' && state.ids.length;
+  const idv = [0, 1, 2].map((i) => esc(state.ids[i] || ''));
+  $('#app').innerHTML = `
+  <section class="start">
+    <div class="start-hero">
+      <p class="kicker">Week 12 lab · Types of Research</p>
+      <h1>Build the <em>Study</em></h1>
+      <p class="lede">Three clients, three claims, 100 tokens each. Design a study, get it past the ethics board, run it on a simulated world, survive Reviewer 2, and then defend only the claims your design actually supports.</p>
+      <div class="flow">
+        <div class="flow-step"><span class="n">01</span><b>Design</b><span>Groups, setting, measure, sample, safeguards.</span></div>
+        <div class="flow-step"><span class="n">02</span><b>Ethics board</b><span>Approved, revise, or rejected. Then name your design.</span></div>
+        <div class="flow-step"><span class="n">03</span><b>Run it</b><span>Real-looking data from a world with a hidden variable.</span></div>
+        <div class="flow-step"><span class="n">04</span><b>Claim it</b><span>Overclaim and you lose points. Then the truth comes out.</span></div>
+      </div>
+      <div class="missions-preview">
+        ${MISSIONS.map((m) => `<div class="mp"><span class="badge">${m.num}</span><q>${esc(m.claim)}</q></div>`).join('')}
+      </div>
+    </div>
+    <form class="paper team-card" id="teamForm" novalidate>
+      <h2>Who’s on this team?</h2>
+      <p class="muted">Groups of 2 or 3 on one device. Working solo because you missed the lab? Enter just your own ID.</p>
+      <div class="field">
+        <label for="id0">Computing IDs</label>
+        <div class="id-row">
+          <input id="id0" autocomplete="off" placeholder="abc2de" value="${idv[0]}" aria-label="Computing ID 1">
+          <input id="id1" autocomplete="off" placeholder="optional" value="${idv[1]}" aria-label="Computing ID 2">
+          <input id="id2" autocomplete="off" placeholder="optional" value="${idv[2]}" aria-label="Computing ID 3">
+        </div>
+      </div>
+      <div class="field">
+        <label for="teamName">Team name</label>
+        <div style="display:flex;gap:8px">
+          <input id="teamName" style="flex:1" maxlength="40" value="${esc(state.team || '')}" placeholder="Pick one or roll one">
+          <button class="btn ghost small" type="button" id="rollName">Roll a name</button>
+        </div>
+      </div>
+      <div class="roles">
+        <div><b>Designer</b> drives the device and makes the final call on each choice.</div>
+        <div><b>Skeptic</b> argues with every choice before it is made. Reads Reviewer 2 out loud.</div>
+        <div><b>Clerk</b> keeps the budget honest and decides, with the team, which claims to defend.</div>
+        <div class="muted">Roles rotate every mission. In a pair, the Designer is also the Clerk. Solo: play all three, and still read Reviewer 2 out loud.</div>
+      </div>
+      <p class="err" id="teamErr" role="alert"></p>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button class="btn" type="submit">${resume ? 'Continue the lab' : 'Open the lab'}</button>
+        ${resume ? '<button class="btn ghost" type="button" id="restart">Start over</button>' : ''}
+      </div>
+    </form>
+  </section>`;
+  $('#rollName').onclick = () => { $('#teamName').value = TEAM_NAMES[Math.floor(Math.random() * TEAM_NAMES.length)]; sfx.click(); };
+  if ($('#restart')) $('#restart').onclick = () => openConfirm('Start over?', 'This erases this device’s progress for the lab. Your exit ticket, if you saved one, is not affected.', 'Erase and start over', () => {
+    try { localStorage.removeItem(STORE); } catch (e) { /* ignore */ }
+    location.reload();
+  });
+  $('#teamForm').onsubmit = (e) => {
+    e.preventDefault();
+    const ids = [0, 1, 2].map((i) => $(`#id${i}`).value.trim().toLowerCase()).filter(Boolean);
+    const bad = ids.filter((x) => !/^[a-z]{2,4}[0-9][a-z0-9]{0,4}$/.test(x));
+    if (!ids.length) { $('#teamErr').textContent = 'Enter at least one computing ID (for example, abc2de).'; return; }
+    if (bad.length) { $('#teamErr').textContent = `That does not look like a computing ID: ${bad.join(', ')}. Use letters, then a number (for example, abc2de).`; return; }
+    if (new Set(ids).size !== ids.length) { $('#teamErr').textContent = 'Each computing ID only once, please.'; return; }
+    const changed = teamKey() !== ids.slice().sort().join('+');
+    state.ids = ids;
+    state.team = $('#teamName').value.trim() || TEAM_NAMES[fnv(ids.join('')) % TEAM_NAMES.length];
+    if (changed) { state.missions = MISSIONS.map(freshMission); state.mission = 0; state.refl = ['', '']; state.finishedAt = null; }
+    if (!state.startedAt || changed) state.startedAt = Date.now();
+    sfx.good();
+    const firstOpen = state.missions.findIndex((x) => !x.submitted);
+    if (firstOpen === -1) return go('ticket');
+    state.mission = firstOpen; state.round = 0;
+    go(state.missions[firstOpen].ran ? 'results' : 'design');
+  };
+}
+
+/* ====================================================================
+   Screen: design board
+   ==================================================================== */
+function roleLine(i) {
+  const ids = state.ids;
+  if (ids.length <= 1) return '<b>Solo:</b> you are Designer, Skeptic, and Clerk. Argue with yourself.';
+  const k = i % ids.length;
+  const d = ids[k], s = ids[(k + 1) % ids.length];
+  const c = ids.length === 3 ? ids[(k + 2) % 3] : d;
+  return `<b>Designer:</b> ${esc(d)} · <b>Skeptic:</b> ${esc(s)} · <b>Clerk:</b> ${esc(c)}`;
+}
+function missionHead(m, i) {
+  return `<div class="mission-head">
+    <div>
+      <p class="kicker">Mission ${m.num} of ${MISSIONS.length} · ${state.round === 1 ? 'Round 2: replay with a different design' : `about ${m.minutes} minutes`}</p>
+      <h1>${esc(m.title)}</h1>
+      <p class="claim-quote">${esc(m.claim)}</p>
+    </div>
+    <div class="role-chip">${roleLine(i)}</div>
+  </div>`;
+}
+function fixChoices(m, ch) {
+  if (ch.setting && ch.alloc && !m.settingAllowed(ch.alloc, ch.setting)) ch.setting = null;
+  if (ch.alloc && !ch.setting) {
+    const allowed = m.settings.filter((s) => m.settingAllowed(ch.alloc, s.id));
+    if (allowed.length === 1) ch.setting = allowed[0].id;
+  }
+  if (ch.measure && !(ch.setting && m.measures.find((x) => x.id === ch.measure).ok(ch))) ch.measure = null;
+  if (ch.alloc && ch.setting && !ch.measure) {
+    const ok = m.measures.filter((x) => x.ok(ch));
+    if (ok.length === 1) ch.measure = ok[0].id;
+  }
+  const nr = ch.setting ? m.nRange(ch) : null;
+  if (!nr) ch.n = ch.alloc === 'case' ? 1 : null;
+  else ch.n = clamp(ch.n == null || ch.n === 1 ? nr.def : Math.round(ch.n / nr.step) * nr.step, nr.min, nr.max);
+  ch.safe = ch.safe.filter((id) => { const s = m.safeguards.find((x) => x.id === id); return s && ch.setting && ch.measure && s.ok(ch); });
+}
+function costLines(m, ch) {
+  const lines = [];
+  if (ch.alloc && ch.setting) lines.push(...m.costs(ch).filter((c) => c.v));
+  if (ch.measure) { const me = m.measures.find((x) => x.id === ch.measure); lines.push({ k: me.title.replace(/[“”]/g, ''), v: me.cost }); }
+  ch.safe.forEach((id) => { const s = m.safeguards.find((x) => x.id === id); lines.push({ k: s.title, v: s.cost }); });
+  return lines;
+}
+const totalCost = (m, ch) => Math.round(costLines(m, ch).reduce((s, l) => s + l.v, 0));
+function summarySentences(m, ch) {
+  const out = [];
+  const a = m.alloc.find((x) => x.id === ch.alloc), s = m.settings.find((x) => x.id === ch.setting), me = m.measures.find((x) => x.id === ch.measure);
+  if (a) out.push(`<b>Groups:</b> ${esc(a.title)}.`);
+  if (s) out.push(`<b>Setting:</b> ${esc(s.title)}.`);
+  if (me) out.push(`<b>Outcome:</b> ${esc(me.title)}.`);
+  if (ch.n && ch.alloc !== 'case') out.push(`<b>Sample:</b> ${ch.n} ${m.id === 'games' ? 'children' : 'people'}.`);
+  if (ch.safe.length) out.push(`<b>Safeguards:</b> ${ch.safe.map((id) => esc(m.safeguards.find((x) => x.id === id).title)).join('; ')}.`);
+  return out;
+}
+function renderDesign() {
+  const i = state.mission, m = MISSIONS[i], st = currentRound(i), ch = st.ch;
+  fixChoices(m, ch);
+  const cost = totalCost(m, ch), over = cost > BUDGET;
+  const nr = ch.setting ? m.nRange(ch) : null;
+  const replay = state.round === 1;
+  const same = replay && designSig(ch) === designSig(state.missions[i].ch);
+  const ready = ch.alloc && ch.setting && ch.measure && st.label && !over && !same;
+  const optBtn = (group, o, on, dis) => `<button type="button" class="opt" data-group="${group}" data-id="${o.id}" aria-pressed="${on}" ${dis ? 'disabled' : ''}>
+      ${ICON[o.icon] || ''}<b>${esc(o.title)}</b><span class="desc">${esc(o.desc)}</span>
+      ${o.chips || o.cost ? `<span class="meta">${o.cost ? `<span class="chip cost">${o.cost} tokens</span>` : ''}${(o.chips || []).map((c) => `<span class="chip">${esc(c)}</span>`).join('')}</span>` : ''}
+    </button>`;
+  const peopleDots = ch.n && ch.alloc !== 'case' ? `<div class="people" aria-hidden="true">${'<i></i>'.repeat(Math.min(200, Math.round(ch.n / (ch.n > 400 ? 6 : ch.n > 150 ? 2 : 1))))}</div><p class="muted" style="font-size:13px;margin-top:6px">Each dot is ${ch.n > 400 ? 6 : ch.n > 150 ? 2 : 1} ${ch.n > 150 ? 'people' : 'person'}.</p>` : '';
+  $('#app').innerHTML = `
+  ${missionHead(m, i)}
+  ${replay ? `<section class="replay-banner">
+    <div><b>Round 2: same world, same true effects, same pool of people.</b> Your Round 1 choices are filled in. Change at least one thing, then compare what happens.</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn ghost light small" id="seeR1" type="button">See Round 1 results</button><button class="btn ghost light small" id="cancelReplay" type="button">Cancel the replay</button></div>
+  </section>` : ''}
+  <div class="brief">
+    <div class="paper"><h3>Client</h3><p>${esc(m.client)}</p></div>
+    <div class="paper"><h3>Population</h3><p>${esc(m.population)}</p></div>
+    <div class="paper"><h3>House rules</h3><p>Budget: ${BUDGET} tokens. ${esc(m.rules)}</p></div>
+  </div>
+  <div class="board">
+    <div class="steps">
+      <section class="paper step" aria-labelledby="s1">
+        <div class="step-title"><span class="n">1</span><h2 id="s1">Who decides who is in which group?</h2><span class="hint">This one choice decides what you can claim.</span></div>
+        <div class="opts">${m.alloc.map((o) => optBtn('alloc', o, ch.alloc === o.id, false)).join('')}</div>
+      </section>
+      <section class="paper step" aria-labelledby="s2">
+        <div class="step-title"><span class="n">2</span><h2 id="s2">Where does it happen?</h2><span class="hint">Control or realism: pick your trade.</span></div>
+        <div class="opts">${m.settings.map((o) => optBtn('setting', o, ch.setting === o.id, !ch.alloc || !m.settingAllowed(ch.alloc, o.id))).join('')}</div>
+        ${!ch.alloc ? '<p class="muted" style="margin-top:8px;font-size:14px">Choose the groups first.</p>' : ''}
+      </section>
+      <section class="paper step" aria-labelledby="s3">
+        <div class="step-title"><span class="n">3</span><h2 id="s3">What will you measure?</h2><span class="hint">Your outcome (the DV).</span></div>
+        <div class="opts">${m.measures.filter((x) => (x.id === 'interview') === (ch.alloc === 'case')).map((o) => optBtn('measure', o, ch.measure === o.id, !ch.setting || !o.ok(ch))).join('')}</div>
+      </section>
+      ${ch.alloc === 'case' ? '' : `<section class="paper step" aria-labelledby="s4">
+        <div class="step-title"><span class="n">4</span><h2 id="s4">How many ${m.id === 'games' ? 'children' : 'people'}?</h2><span class="hint">More people, narrower likely range, bigger bill.</span></div>
+        ${nr ? `<div class="slider-row"><input type="range" id="nSlider" min="${nr.min}" max="${nr.max}" step="${nr.step}" value="${ch.n}" aria-label="Sample size"><span class="n-readout num" id="nOut">${ch.n}</span></div>${peopleDots}` : '<p class="muted" style="font-size:14px">Choose groups and a setting first.</p>'}
+      </section>`}
+      <section class="paper step" aria-labelledby="s5">
+        <div class="step-title"><span class="n">${ch.alloc === 'case' ? 4 : 5}</span><h2 id="s5">Safeguards</h2><span class="hint">Some are required. Some just make the data better.</span></div>
+        <div class="checks">${m.safeguards.map((s) => {
+          const avail = ch.setting && ch.measure && s.ok(ch), on = ch.safe.includes(s.id);
+          return `<label class="check ${on ? 'on' : ''} ${avail ? '' : 'disabled'}"><input type="checkbox" data-safe="${s.id}" ${on ? 'checked' : ''} ${avail ? '' : 'disabled'}><b>${esc(s.title)} <span class="chip cost">${s.cost}</span></b><span class="desc">${esc(s.desc)}</span></label>`;
+        }).join('')}</div>
+      </section>
+    </div>
+    <aside class="side">
+      <div class="paper budget" aria-live="polite">
+        <div class="budget-top"><b>Budget</b><span class="budget-num num ${over ? 'over' : ''}">${cost}<span style="font-size:16px;color:var(--ink-soft)"> / ${BUDGET}</span></span></div>
+        <div class="bar ${over ? 'over' : ''}"><span style="width:${Math.min(100, cost)}%"></span></div>
+        <div class="cost-lines">${costLines(m, ch).map((l) => `<div><span>${esc(l.k)}</span><span class="num">${fmt(l.v, l.v % 1 ? 1 : 0)}</span></div>`).join('') || '<div class="muted">Nothing spent yet.</div>'}</div>
+        ${over ? `<p class="err" style="margin-top:8px">Over budget by ${cost - BUDGET}. Cut the sample or a safeguard.</p>` : ''}
+      </div>
+      <div class="paper summary">
+        <h3>Your study so far</h3>
+        ${summarySentences(m, ch).length ? `<ul>${summarySentences(m, ch).map((s) => `<li>${s}</li>`).join('')}</ul>` : '<p class="muted">Start with step 1.</p>'}
+      </div>
+      <div class="paper label-pick">
+        <h3>Name your design</h3>
+        <p class="muted">Before the board sees it: what kind of study is this? Use the method finder if you are stuck.</p>
+        <div class="field"><label for="labelSel" class="sr-only">Design type</label>
+          <select id="labelSel"><option value="">Choose a design type</option>${LABELS.map(([c, t]) => `<option value="${c}" ${st.label === c ? 'selected' : ''}>${t}</option>`).join('')}</select>
+        </div>
+        <button class="btn" id="submitBtn" type="button" ${ready ? '' : 'disabled'}>Send to the ethics board</button>
+        <p class="muted" style="font-size:13px" id="readyNote">${ready ? `Attempt ${st.attempts + 1}. Approval on the first try earns 10 points.` : !ch.alloc || !ch.setting || !ch.measure ? 'Finish steps 1 to 3.' : over ? 'Get under budget first.' : same ? 'This is the same design as Round 1. Change at least one thing: groups, setting, measure, sample size, or a safeguard.' : 'Name your design first.'}</p>
+      </div>
+    </aside>
+  </div>`;
+  $$('.opt').forEach((b) => b.onclick = () => {
+    if (b.disabled) return;
+    ch[b.dataset.group] = b.dataset.id; sfx.click(); fixChoices(m, ch); save(); rerenderKeepScroll(renderDesign);
+  });
+  $$('input[data-safe]').forEach((c) => c.onchange = () => {
+    const id = c.dataset.safe;
+    ch.safe = c.checked ? [...new Set([...ch.safe, id])] : ch.safe.filter((x) => x !== id);
+    sfx.click(); save(); rerenderKeepScroll(renderDesign);
+  });
+  const sl = $('#nSlider');
+  if (sl) {
+    sl.oninput = () => { ch.n = Number(sl.value); $('#nOut').textContent = ch.n; };
+    sl.onchange = () => { ch.n = Number(sl.value); save(); rerenderKeepScroll(renderDesign, '#nSlider'); };
+  }
+  $('#labelSel').onchange = (e) => { st.label = e.target.value; save(); rerenderKeepScroll(renderDesign, '#labelSel'); };
+  $('#submitBtn').onclick = () => submitToBoard(i);
+  if ($('#seeR1')) $('#seeR1').onclick = () => { state.round = 0; go('results'); };
+  if ($('#cancelReplay')) $('#cancelReplay').onclick = () => openConfirm('Cancel the replay?', 'Round 2 will be discarded. Your Round 1 results and score stay as they are.', 'Discard Round 2', () => {
+    state.missions[i].replay = null; state.round = 0; save(); go('results');
+  });
+}
+function rerenderKeepScroll(fn, focusSel) {
+  const y = window.scrollY; fn(); window.scrollTo(0, y);
+  if (focusSel && $(focusSel)) $(focusSel).focus({ preventScroll: true });
+}
+
+/* ====================================================================
+   Ethics board
+   ==================================================================== */
+function submitToBoard(i) {
+  const m = MISSIONS[i], st = currentRound(i), ch = st.ch;
+  st.attempts += 1;
+  const items = m.ethics(ch);
+  const verdict = items.some((x) => x.s === 'reject') ? 'rejected' : items.some((x) => x.s === 'revise') ? 'revise' : 'approved';
+  let labelHtml = '';
+  if (verdict === 'approved') {
+    st.approved = true; st.firstPass = st.attempts === 1; st.ran = true; state.screen = 'results';
+    st.labelSubmitted = st.label;
+    st.labelOk = correctLabels(m, ch).includes(st.label);
+    labelHtml = `<div class="verdict ${st.labelOk ? 'ok' : 'no'}"><span class="mark">${st.labelOk ? '✓' : '✕'}</span><div><b>Design type: you said “${esc(labelName(st.label))}.” ${st.labelOk ? 'Correct.' : `It is a ${esc(correctLabels(m, ch).map(labelName).join(' (or ') + (correctLabels(m, ch).length > 1 ? ')' : ''))}.`}</b>${esc(labelExplain(m, ch))}</div></div>`;
+  }
+  save();
+  sfx.stamp();
+  setTimeout(() => (verdict === 'approved' ? sfx.good() : sfx.bad()), 300);
+  const stampText = { approved: 'Approved', revise: 'Revise', rejected: 'Rejected' }[verdict];
+  const mk = { ok: '✓', revise: '!', reject: '✕' };
+  openModal(`
+    <div class="paper modal" role="dialog" aria-modal="true" aria-labelledby="ebTitle">
+      <span class="stamp ${verdict}">${stampText}</span>
+      <p class="kicker">Ethics and Feasibility Board</p>
+      <h2 id="ebTitle">${verdict === 'approved' ? 'You may run it.' : verdict === 'revise' ? 'Fix this and resubmit.' : 'Not this design.'}</h2>
+      <p class="muted">Submission ${st.attempts} for Mission ${m.num}${state.round === 1 ? ', Round 2' : ''}.${verdict === 'approved' ? (st.firstPass ? ' First try: +10 points.' : ' Approved after a revision: no first-try bonus.') : ''}</p>
+      <div class="verdicts">
+        ${items.map((x) => `<div class="verdict ${x.s === 'ok' ? 'ok' : x.s === 'revise' ? 'meh' : 'no'}"><span class="mark">${mk[x.s]}</span><div><b>${esc(x.t)}</b>${esc(x.x)}</div></div>`).join('')}
+        ${labelHtml}
+      </div>
+      <div class="modal-actions">
+        ${verdict === 'approved' ? '<button class="btn" id="runBtn" type="button">Run the study</button>' : '<button class="btn" id="backBtn" type="button">Back to the design</button>'}
+      </div>
+    </div>`, verdict !== 'approved');
+  if (verdict === 'approved') {
+    burst();
+    $('#runBtn').onclick = () => { closeModal(); sfx.run(); go('results'); };
+    $('#runBtn').focus();
+  } else {
+    $('#backBtn').onclick = closeModal; $('#backBtn').focus();
+  }
+  announce(`Ethics board: ${stampText}.`);
+}
+
+/* ====================================================================
+   Charts
+   ==================================================================== */
+const COL_T = '#E57200', COL_C = '#3AA6D8';
+function hiddenColor(h) {
+  const t = clamp((h + 2) / 4, 0, 1);
+  const a = [108, 76, 245], b = [246, 196, 69];
+  const c = a.map((v, k) => Math.round(v + (b[k] - v) * t));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+function niceTicks(lo, hi, k = 5) {
+  const span = hi - lo || 1, step0 = span / k, mag = Math.pow(10, Math.floor(Math.log10(step0)));
+  const step = [1, 2, 2.5, 5, 10].map((s) => s * mag).find((s) => span / s <= k + 0.5) || mag * 10;
+  const ticks = []; for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) ticks.push(+v.toFixed(6));
+  return ticks;
+}
+function chartGroups(res, hidden, rnd) {
+  const W = 680, H = 360, L = 56, R = 170, T = 22, B = 48;
+  const ys = res.data.map((p) => p.y);
+  let lo = Math.min(...ys, res.stats.mb, res.stats.ma), hi = Math.max(...ys, res.stats.mb, res.stats.ma);
+  const pad = (hi - lo) * 0.08 || 1; lo -= pad; hi += pad;
+  const sy = (v) => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  const cx = [L + (W - L - R) * 0.28, L + (W - L - R) * 0.74];
+  const ticks = niceTicks(lo, hi);
+  const r = makeRng(fnv(`jitter|${res.n}|${res.yName}`));
+  const intData = res.data.every((p) => Math.abs(p.y - Math.round(p.y)) < 1e-9);
+  const dots = res.data.map((p) => {
+    const x = cx[p.g] + (r() - 0.5) * 120, y = sy(p.y) + (intData ? (r() - 0.5) * 10 : 0);
+    const sx = (L + W - R) / 2 + (r() - 0.5) * 60, syy = T + 6 + r() * 16;
+    const fill = hidden ? hiddenColor(p.h) : (p.g ? COL_T : COL_C);
+    return `<circle class="dot" r="4.2" cx="0" cy="0" fill="${fill}" fill-opacity="0.82" style="transform:translate(${rnd ? sx : x}px,${rnd ? syy : y}px)" data-x="${x.toFixed(1)}" data-y="${y.toFixed(1)}"></circle>`;
+  }).join('');
+  const means = [res.stats.mb, res.stats.ma];
+  const bx = W - R + 26;
+  const d = res.d;
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Dot plot of ${esc(res.yName)} by group. ${esc(res.labels[0])} mean ${fmt(means[0], d)}, ${esc(res.labels[1])} mean ${fmt(means[1], d)}.">
+    <g class="axis">${ticks.map((t) => `<line x1="${L}" x2="${W - R}" y1="${sy(t)}" y2="${sy(t)}" stroke-dasharray="2 4"></line><text x="${L - 8}" y="${sy(t) + 4}" text-anchor="end">${fmt(t, Math.abs(t) < 10 && t % 1 ? 1 : 0)}</text>`).join('')}
+      <text x="14" y="${(T + H - B) / 2}" transform="rotate(-90 14 ${(T + H - B) / 2})" text-anchor="middle">${esc(res.yName)}</text>
+      ${res.labels.map((lb, k) => `<text x="${cx[k]}" y="${H - 18}" text-anchor="middle" style="font-size:12.5px;fill:#13203a;font-weight:700">${esc(lb)}</text><text x="${cx[k]}" y="${H - 4}" text-anchor="middle">n = ${k ? res.stats.na : res.stats.nb}</text>`).join('')}
+    </g>
+    <g>${dots}</g>
+    ${means.map((mv, k) => `<line x1="${cx[k] - 72}" x2="${cx[k] + 72}" y1="${sy(mv)}" y2="${sy(mv)}" stroke="#13203a" stroke-width="3.5" stroke-linecap="round"></line><text x="${cx[k] + 76}" y="${sy(mv) + 4}" style="font-family:var(--font-mono);font-size:12px;font-weight:700;fill:#13203a">${fmt(mv, d)}</text>`).join('')}
+    <g>
+      <line x1="${bx}" x2="${bx}" y1="${sy(means[0])}" y2="${sy(means[1])}" stroke="${COL_T}" stroke-width="3"></line>
+      <line x1="${bx - 6}" x2="${bx + 6}" y1="${sy(means[0])}" y2="${sy(means[0])}" stroke="${COL_T}" stroke-width="3"></line>
+      <line x1="${bx - 6}" x2="${bx + 6}" y1="${sy(means[1])}" y2="${sy(means[1])}" stroke="${COL_T}" stroke-width="3"></line>
+      <text x="${bx + 12}" y="${(sy(means[0]) + sy(means[1])) / 2 - 6}" style="font-family:var(--font-mono);font-size:15px;font-weight:700;fill:#b45400">${fmt(res.stats.est, d, true)}</text>
+      <text x="${bx + 12}" y="${(sy(means[0]) + sy(means[1])) / 2 + 12}" style="font-size:11px;fill:#4d5b74">difference</text>
+    </g>
+  </svg>`;
+}
+function chartScatter(res, hidden, rnd) {
+  const W = 680, H = 360, L = 56, R = 24, T = 22, B = 48;
+  const xs = res.data.map((p) => p.x), ys = res.data.map((p) => p.y);
+  let xlo = Math.min(...xs), xhi = Math.max(...xs), ylo = Math.min(...ys), yhi = Math.max(...ys);
+  const px = (xhi - xlo) * 0.04 || 1, py = (yhi - ylo) * 0.08 || 1; xlo -= px; xhi += px; ylo -= py; yhi += py;
+  const sx = (v) => L + (W - L - R) * (v - xlo) / (xhi - xlo), sy = (v) => T + (H - T - B) * (1 - (v - ylo) / (yhi - ylo));
+  const r = makeRng(fnv(`jitter|${res.n}|${res.xName}`));
+  const intData = res.data.every((p) => Math.abs(p.y - Math.round(p.y)) < 1e-9);
+  const dots = res.data.map((p) => {
+    const x = sx(p.x), y = sy(p.y) + (intData ? (r() - 0.5) * 8 : 0);
+    const fill = hidden ? hiddenColor(p.h) : '#4A5A8C';
+    return `<circle class="dot" r="3.8" cx="0" cy="0" fill="${fill}" fill-opacity="0.75" style="transform:translate(${rnd ? (L + W - R) / 2 + (r() - 0.5) * 40 : x}px,${rnd ? T + 10 : y}px)" data-x="${x.toFixed(1)}" data-y="${y.toFixed(1)}"></circle>`;
+  }).join('');
+  const xt = niceTicks(xlo, xhi, 6), yt = niceTicks(ylo, yhi);
+  const bins = (res.bins || []).filter((b) => b.n >= 3);
+  const binLine = bins.length ? `<polyline points="${bins.map((b) => `${sx(b.x).toFixed(1)},${sy(b.m).toFixed(1)}`).join(' ')}" fill="none" stroke="#E57200" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"></polyline>${bins.map((b) => `<circle cx="${sx(b.x)}" cy="${sy(b.m)}" r="6" fill="#fff" stroke="#E57200" stroke-width="3"></circle>`).join('')}` : '';
+  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Scatterplot of ${esc(res.yName)} against ${esc(res.xName)}, r = ${fmtR(res.stats.est)}.">
+    <g class="axis">${yt.map((t) => `<line x1="${L}" x2="${W - R}" y1="${sy(t)}" y2="${sy(t)}" stroke-dasharray="2 4"></line><text x="${L - 8}" y="${sy(t) + 4}" text-anchor="end">${fmt(t, t % 1 ? 1 : 0)}</text>`).join('')}
+      ${xt.map((t) => `<text x="${sx(t)}" y="${H - 26}" text-anchor="middle">${fmt(t, t % 1 ? 1 : 0)}</text>`).join('')}
+      <text x="${(L + W - R) / 2}" y="${H - 6}" text-anchor="middle" style="font-size:12.5px;fill:#13203a;font-weight:700">${esc(res.xName)}</text>
+      <text x="14" y="${(T + H - B) / 2}" transform="rotate(-90 14 ${(T + H - B) / 2})" text-anchor="middle">${esc(res.yName)}</text>
+    </g>
+    <g>${dots}</g>
+    ${binLine}
+  </svg>`;
+}
+function animateDots() {
+  const dots = $$('.chart-wrap .dot');
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const place = () => dots.forEach((c, k) => { c.style.transitionDelay = reduce ? '0ms' : `${Math.min(700, k * 3)}ms`; c.style.transform = `translate(${c.dataset.x}px,${c.dataset.y}px)`; });
+  if (reduce) place(); else requestAnimationFrame(() => requestAnimationFrame(place));
+}
+
+/* ====================================================================
+   Screen: results, Reviewer 2, claims, reveal
+   ==================================================================== */
+function scoreMission(i, r = 0) {
+  const m = MISSIONS[i], st = roundObj(i, r);
+  if (!st || !st.submitted) return null;
+  const res = resultFor(i, r);
+  let claimPts = 0, over = 0;
+  const detail = m.claims.map((c) => {
+    const truth = !!c.sup(st.ch, res), said = st.marks[c.id] === 'yes';
+    if (said === truth) claimPts += 20; else if (said && !truth) over += 1;
+    return { id: c.id, truth, said, right: said === truth };
+  });
+  const eth = st.firstPass ? 10 : 0, lab = st.labelOk ? 10 : 0;
+  return { total: eth + lab + claimPts, eth, lab, claimPts, over, detail, round: r };
+}
+/* The better of the two rounds counts (ties go to Round 1). */
+function bestScore(i) {
+  const a = scoreMission(i, 0), b = scoreMission(i, 1);
+  if (!b) return a;
+  if (!a) return b;
+  return b.total > a.total ? b : a;
+}
+function estText(res) {
+  if (!res || res.kind === 'case') return 'No statistics (one person)';
+  const d = res.d || 1;
+  return res.kind === 'scatter' ? `r = ${fmtR(res.stats.est)}` : `${fmt(res.stats.est, d, true)} ${res.unit}`;
+}
+function rangeTextRes(res) {
+  if (!res || res.kind === 'case') return '–';
+  return res.kind === 'scatter' ? `${fmtR(res.stats.lo)} to ${fmtR(res.stats.hi)}` : rangeText(res.stats, res.d || 1);
+}
+function designDiffs(m, a, b) {
+  const out = [];
+  const t = (list, id) => { const x = list.find((y) => y.id === id); return x ? x.title.replace(/[“”]/g, '') : '–'; };
+  if (a.alloc !== b.alloc) out.push(`Groups: ${t(m.alloc, a.alloc)} → ${t(m.alloc, b.alloc)}`);
+  if (a.setting !== b.setting) out.push(`Setting: ${t(m.settings, a.setting)} → ${t(m.settings, b.setting)}`);
+  if (a.measure !== b.measure) out.push(`Outcome: ${t(m.measures, a.measure)} → ${t(m.measures, b.measure)}`);
+  if (a.n !== b.n && a.alloc !== 'case' && b.alloc !== 'case') out.push(`Sample: ${a.n} → ${b.n}`);
+  const added = b.safe.filter((x) => !a.safe.includes(x)), dropped = a.safe.filter((x) => !b.safe.includes(x));
+  added.forEach((x) => out.push(`Added: ${t(m.safeguards, x)}`));
+  dropped.forEach((x) => out.push(`Dropped: ${t(m.safeguards, x)}`));
+  return out;
+}
+function compareCard(i) {
+  const m = MISSIONS[i], A = state.missions[i], B = A.replay;
+  if (!B || !A.submitted || !B.submitted) return '';
+  const ra = resultFor(i, 0), rb = resultFor(i, 1), sa = scoreMission(i, 0), sb = scoreMission(i, 1), best = bestScore(i);
+  const sup = (sc) => { const k = sc.detail.map((d, j) => (d.truth ? j + 1 : 0)).filter(Boolean); return k.length ? k.join(', ') : 'none'; };
+  const trueTxt = (res) => (res && res.trueEffect != null && res.kind !== 'case' ? (res.kind === 'scatter' ? `${fmt(res.trueEffect, 2, true)} per hour` : `${fmt(res.trueEffect, res.d || 1, true)} ${res.unit}`) : 'No single number');
+  const rows = [
+    ['Design type', esc(labelName(correctLabels(m, A.ch)[0])), esc(labelName(correctLabels(m, B.ch)[0]))],
+    ['What your study found', esc(estText(ra)), esc(estText(rb))],
+    ['Likely range', esc(rangeTextRes(ra)), esc(rangeTextRes(rb))],
+    ['True causal effect on that measure', esc(trueTxt(ra)), esc(trueTxt(rb))],
+    ['Claims the design could support', sup(sa), sup(sb)],
+    ['Points', `${sa.total}${best.round === 0 ? ' (counted)' : ''}`, `${sb.total}${best.round === 1 ? ' (counted)' : ''}`],
+  ];
+  const diffs = designDiffs(m, A.ch, B.ch);
+  return `<section class="paper compare">
+    <p class="kicker">Round 1 vs. Round 2</p>
+    <h2>Same world, two designs</h2>
+    <p class="muted" style="font-size:14.5px">What you changed: ${diffs.length ? diffs.map(esc).join('; ') : 'nothing visible'}.</p>
+    <div class="t-wrap"><table class="t-table">
+      <thead><tr><th></th><th>Round 1</th><th>Round 2</th></tr></thead>
+      <tbody>${rows.map(([k, a, b]) => `<tr><th scope="row">${k}</th><td class="${a !== b ? 'diff' : ''}">${a}</td><td class="${a !== b ? 'diff' : ''}">${b}</td></tr>`).join('')}</tbody>
+    </table></div>
+    <p class="muted" style="font-size:13.5px">Both rounds drew the same simulated people wherever the two designs allowed it, so most of the difference comes from the design.</p>
+  </section>`;
+}
+function renderResults() {
+  const i = state.mission, m = MISSIONS[i], st = currentRound(i), ch = st.ch;
+  if (!st.ran) return go('design');
+  const res = resultFor(i);
+  const firstView = !st.viewed; st.viewed = true; save();
+  const sc = scoreMission(i, state.round);
+  const base = state.missions[i], rp = base.replay;
+  const tabs = rp ? `<div class="round-tabs" aria-label="Rounds">
+      <button type="button" class="seg" data-round="0" aria-pressed="${state.round === 0}">Round 1</button>
+      <button type="button" class="seg" data-round="1" aria-pressed="${state.round === 1}">Round 2${rp.submitted ? '' : rp.ran ? ' (claims open)' : ' (designing)'}</button>
+    </div>` : '';
+  const elapsedMin = state.startedAt ? (Date.now() - state.startedAt) / 60000 : 0;
+  const paceEnd = [14, 24, 34][i] || 34;
+  const behind = elapsedMin > paceEnd;
+  const P = paramsFor(m);
+  const d = res.d || 1;
+  let chart = '', stats = '';
+  if (res.kind === 'groups') {
+    chart = chartGroups(res, st.submitted && st.revealHidden, firstView);
+    stats = `<div class="stat-row">
+      <div class="stat"><div class="v num">${fmt(res.stats.mb, d)} → ${fmt(res.stats.ma, d)}</div><div class="k">Group means (${esc(res.labels[0])} → ${esc(res.labels[1])})</div></div>
+      <div class="stat"><div class="v num" style="color:var(--accent-ink)">${fmt(res.stats.est, d, true)}</div><div class="k">Difference (${esc(res.unit)})</div></div>
+      <div class="stat"><div class="v num">${rangeText(res.stats, d)}</div><div class="k">Likely range for the difference${res.stats.lo > 0 ? ': above zero' : res.stats.hi < 0 ? ': below zero' : ': includes zero'}</div></div>
+    </div>`;
+  } else if (res.kind === 'scatter') {
+    chart = chartScatter(res, st.submitted && st.revealHidden, firstView);
+    stats = `<div class="stat-row">
+      <div class="stat"><div class="v num">r = ${fmtR(res.stats.est)}</div><div class="k">Correlation, ${plural(res.n, 'person')}</div></div>
+      <div class="stat"><div class="v num">${fmtR(res.stats.lo)} to ${fmtR(res.stats.hi)}</div><div class="k">Likely range for r${res.stats.lo > 0 ? ': above zero' : res.stats.hi < 0 ? ': below zero' : ': includes zero'}</div></div>
+      ${res.bins ? `<div class="stat"><div class="v num">${fmt(res.assoc.est, 2, true)}</div><div class="k">Ages 60+ minus under 30 (likely range ${rangeText(res.assoc, 2)})</div></div>` : `<div class="stat"><div class="v num">${plural(res.n, 'person')}</div><div class="k">${res.n > res.data.length ? `Showing ${res.data.length} dots` : 'All shown'}</div></div>`}
+    </div>
+    ${res.bins ? '<p class="muted" style="font-size:13px;margin-top:8px">Orange line: average happiness in each age band (18 to 27, 28 to 37, and so on).</p>' : ''}`;
+  }
+  const chartBlock = res.kind === 'case' ? `
+    <section class="paper case-card">
+      <p class="kicker">Case study · “Ruth,” 100 (a fictional participant)</p>
+      <h2>Forty hours of interviews, letters, and family stories</h2>
+      ${res.quotes.map((q) => `<blockquote>“${esc(q)}”</blockquote>`).join('')}
+      <p class="muted">${esc(res.note)}</p>
+    </section>` : `
+    <section class="paper chart-card">
+      <p class="kicker">Results</p>
+      <h2>${esc(res.yName)}${res.kind === 'scatter' ? ` by ${esc(res.xName.toLowerCase())}` : ' by group'}</h2>
+      <p class="design-recap">${summarySentences(m, ch).map((s) => s.replace(/<[^>]+>/g, '')).join(' ')}</p>
+      <div class="chart-wrap" id="chartWrap">${chart}</div>
+      <div class="legend">${st.submitted && st.revealHidden ? `<span><span class="grad"></span> ${esc(m.hiddenName)}: low to high</span>` : res.kind === 'groups' ? `<span><i style="background:${COL_C}"></i>${esc(res.labels[0])}</span><span><i style="background:${COL_T}"></i>${esc(res.labels[1])}</span><span>Bars: group means</span>` : '<span>Each dot is one person.</span>'}${res.n > res.data.length ? `<span>${res.data.length} of ${res.n} people shown</span>` : ''}</div>
+      ${stats}
+      ${st.submitted ? `<div class="toggle-hidden"><button class="btn small" id="hiddenBtn" type="button" aria-pressed="${!!st.revealHidden}">${st.revealHidden ? 'Hide' : 'Reveal'} the hidden variable: ${esc(m.hiddenName.toLowerCase())}</button>
+        ${st.revealHidden ? `<span class="muted" style="font-size:14px">${res.kind === 'groups' ? `Average ${esc(m.hiddenName.toLowerCase())}: ${esc(res.labels[0])} ${fmt(res.hiddenStat[0], 2, true)}, ${esc(res.labels[1])} ${fmt(res.hiddenStat[1], 2, true)} (0 = an average person).` : `Correlation of ${esc(m.hiddenName.toLowerCase())} with ${esc(res.xName.split(' (')[0].toLowerCase())}: r = ${fmtR(res.hiddenStat)}.`}</span>` : ''}</div>` : ''}
+    </section>`;
+  const rev = m.reviewer(ch, res);
+  const reviewer = `<section class="paper reviewer">
+    <div class="reviewer-head">${REVIEWER_FACE}<div><p class="kicker" style="color:var(--bad)">Peer review</p><h2>Reviewer 2 has notes</h2></div></div>
+    <ol>${(rev.length ? rev : ['I have no complaints, which worries me.']).map((x) => typeof x === 'string' ? `<li>${esc(x)}</li>` : `<li class="praise">${esc(x.t)}</li>`).join('')}</ol>
+  </section>`;
+  const claimsHtml = m.claims.map((c, k) => {
+    const mark = st.marks[c.id];
+    let verdict = '';
+    if (st.submitted) {
+      const truth = !!c.sup(ch, res), said = mark === 'yes', right = said === truth;
+      verdict = `<div class="verdict-line ${right ? 'right' : 'wrong'}"><b>${right ? (truth ? 'Right: you can claim this. +20' : 'Right: you cannot claim this. +20') : (said ? 'Overclaim: your design does not support this. 0' : 'Underclaim: you could have claimed this. 0')}</b>${esc(c.why(ch, res, truth))}</div>`;
+    }
+    return `<div class="claim"><p>${k + 1}. ${esc(c.text)}</p>
+      <div class="choices" role="group" aria-label="Claim ${k + 1}">
+        <button type="button" class="seg yes" data-claim="${c.id}" data-v="yes" aria-pressed="${mark === 'yes'}" ${st.submitted ? 'disabled' : ''}>We can claim this</button>
+        <button type="button" class="seg no" data-claim="${c.id}" data-v="no" aria-pressed="${mark === 'no'}" ${st.submitted ? 'disabled' : ''}>We can’t claim this</button>
+      </div>${verdict}</div>`;
+  }).join('');
+  const allMarked = m.claims.every((c) => st.marks[c.id]);
+  const last = i === MISSIONS.length - 1;
+  $('#app').innerHTML = `
+  ${missionHead(m, i)}
+  ${tabs}
+  <div class="results-grid">
+    <div style="display:grid;gap:20px">
+      ${chartBlock}
+      ${st.submitted ? `<section class="truth"><p class="kicker" style="color:var(--hidden-hi)">The hidden truth</p><h2>What was really going on in this world</h2><p>${m.truth(ch, res, P)}</p>
+        ${res.trueEffect != null && res.kind !== 'case' ? `<div class="big"><div><div class="v">${res.kind === 'scatter' ? fmt(res.trueEffect, 2, true) : fmt(res.trueEffect, d, true)}</div><div class="k">True causal effect ${res.kind === 'scatter' ? 'of one more hour per week' : 'of the treatment'} on your measure</div></div><div><div class="v">${res.kind === 'scatter' ? 'r = ' + fmtR(res.stats.est) : fmt(res.stats.est, d, true)}</div><div class="k">What your design found</div></div></div>` : ''}
+      </section>` : ''}
+    </div>
+    <div style="display:grid;gap:20px">
+      ${reviewer}
+      <section class="paper claims">
+        <p class="kicker">The client wants a headline</p>
+        <h2>Which claims can your study defend?</h2>
+        <p class="muted" style="font-size:14.5px">Each correct call earns 20 points. Claiming something your design cannot support earns nothing, and the client may quote you on it.</p>
+        ${claimsHtml}
+        ${st.submitted ? '' : `<button class="btn" id="claimBtn" type="button" ${allMarked ? '' : 'disabled'}>Lock in our claims</button><p class="muted" style="font-size:13px">${allMarked ? 'Locked claims cannot be changed.' : 'Decide on all four claims.'}</p>`}
+      </section>
+    </div>
+  </div>
+  ${compareCard(i)}
+  ${st.submitted ? `<div class="scorebar"><span class="pts num">${sc.total}</span><span class="parts">${state.round === 1 ? 'Round 2' : `Mission ${m.num}`} points out of 100: ethics first try ${sc.eth}/10 · design named ${sc.lab}/10 · claims ${sc.claimPts}/80${sc.over ? ` · ${plural(sc.over, 'overclaim')}` : ''}${rp && rp.submitted ? ` · the better round counts: ${bestScore(i).total}` : ''}</span><button class="btn" id="nextBtn" type="button">${last ? 'Go to the exit ticket' : `On to Mission ${m.num + 1}`}</button></div>` : ''}
+  ${st.submitted && state.round === 0 && !rp ? `<div class="replay-offer">
+    <div><b>Optional: play this mission again with a different design.</b> Same world, same true effects, same pool of people. Change one choice (or several), then compare the two rounds side by side. The better round counts. About 5 minutes.${behind ? ' <span class="pace">You are behind the 40-minute pace, so consider moving on and replaying at home.</span>' : ''}</div>
+    <button class="btn ghost light" id="replayBtn" type="button">Play this again with a different design</button>
+  </div>` : ''}`;
+  if (res.kind !== 'case') animateDots();
+  $$('.seg').forEach((b) => b.onclick = () => { st.marks[b.dataset.claim] = b.dataset.v; sfx.click(); save(); rerenderKeepScroll(renderResults); });
+  if ($('#claimBtn')) $('#claimBtn').onclick = () => {
+    st.submitted = true; save();
+    const s = scoreMission(i, state.round);
+    (s.claimPts >= 60 ? sfx.good : sfx.bad)();
+    if (s.total >= 80) burst();
+    rerenderKeepScroll(renderResults);
+    announce(`Mission ${m.num} scored ${s.total} out of 100.`);
+  };
+  if ($('#hiddenBtn')) $('#hiddenBtn').onclick = () => { st.revealHidden = !st.revealHidden; save(); sfx.click(); rerenderKeepScroll(renderResults); };
+  if ($('#nextBtn')) $('#nextBtn').onclick = () => {
+    state.round = 0;
+    if (last) { if (!state.finishedAt) state.finishedAt = Date.now(); go('ticket'); }
+    else { state.mission = i + 1; go(state.missions[i + 1].ran ? 'results' : 'design'); }
+  };
+  if ($('#replayBtn')) $('#replayBtn').onclick = () => {
+    const r2 = freshMission();
+    r2.ch = { alloc: base.ch.alloc, setting: base.ch.setting, measure: base.ch.measure, n: base.ch.n, safe: base.ch.safe.slice() };
+    base.replay = r2; state.round = 1; sfx.click(); go('design');
+  };
+  $$('.round-tabs .seg').forEach((b) => b.onclick = () => {
+    const r = Number(b.dataset.round); if (r === state.round) return;
+    state.round = r; sfx.click();
+    go(r === 1 && !(rp && rp.ran) ? 'design' : 'results');
+  });
+}
+
+/* ====================================================================
+   Screen: exit ticket
+   ==================================================================== */
+const REFL_BASE = [
+  'Which claim was most tempting to make even though your design could not support it? What about the design blocked it?',
+  'Pick one mission. If you could run one more study, what would you change in the design, and what new claim would that let you make?',
+];
+const REFL_REPLAY = 'Pick a mission you replayed. What did you change in the design, how did the results and the claims you could defend change, and why?';
+const anyReplay = () => state.missions.some((x) => x.replay && x.replay.submitted);
+const reflPrompts = () => [REFL_BASE[0], anyReplay() ? REFL_REPLAY : REFL_BASE[1]];
+const MIN_WORDS = 20;
+function rankFor(total, over) {
+  if (total >= 260 && over === 0) return ['Reviewer 2’s Worst Nightmare', 'Every claim matched the design. Nothing for Reviewer 2 to do.'];
+  if (total >= 220) return ['Careful Scientist', 'You claimed what your designs earned, almost every time.'];
+  if (over >= 4) return ['Press Release Writer', 'Bold headlines. Your designs could not back several of them.'];
+  if (total >= 160) return ['Promising Researcher', 'Solid instincts, a few slips between design and claim.'];
+  return ['Back to Section Two', 'Reread Searle’s summary table (p. 30) before the next quiz.'];
+}
+function roundCode(m, i, r) {
+  const st = roundObj(i, r), sc = scoreMission(i, r) || { total: 0, detail: [] };
+  const marks = m.claims.map((c) => (st.marks[c.id] === 'yes' ? 'Y' : st.marks[c.id] === 'no' ? 'N' : '-')).join('');
+  const truth = sc.detail.length ? sc.detail.map((x) => (x.truth ? 'Y' : 'N')).join('') : '----';
+  const ch = st.ch;
+  return `${ch.alloc || '-'}.${ch.setting || '-'}.${ch.measure || '-'}.${ch.n || 0}.${ch.safe.slice().sort().join('+') || 'none'}.${st.labelSubmitted || '-'}.${st.labelOk ? 1 : 0}.${st.attempts}.${st.firstPass ? 1 : 0}.${marks}.${truth}.${sc.total}`;
+}
+function machineBlock() {
+  const ms = MISSIONS.map((m, i) => {
+    const rp = state.missions[i].replay;
+    return `m${m.num}=${roundCode(m, i, 0)}${rp && rp.submitted ? `|m${m.num}r=${roundCode(m, i, 1)}` : ''}`;
+  }).join('|');
+  const tot = MISSIONS.reduce((s, m, i) => s + ((bestScore(i) || {}).total || 0), 0);
+  const over = MISSIONS.reduce((s, m, i) => s + ((bestScore(i) || {}).over || 0), 0);
+  const mins = state.finishedAt && state.startedAt ? Math.round((state.finishedAt - state.startedAt) / 60000) : 0;
+  const body = `BTS1|ids=${state.ids.join('+')}|${ms}|w=${words(state.refl[0])}.${words(state.refl[1])}|rh=${hex8(fnv(state.refl.join('␞')))}|t=${tot}|oc=${over}|min=${mins}`;
+  return { body, code: hex8(fnv(`${body}|${SALT}`)), tot, over };
+}
+function ticketText() {
+  const { body, code, tot, over } = machineBlock();
+  const [rank] = rankFor(tot, over);
+  const L = [];
+  L.push('BUILD THE STUDY: EXIT TICKET');
+  L.push('Research Methods & Data Analysis I, University of Virginia, Week 12');
+  L.push(`Team: ${state.team}`);
+  L.push(`Computing IDs: ${state.ids.join(', ')}`);
+  L.push(`Finished: ${new Date(state.finishedAt || Date.now()).toLocaleString()}`);
+  L.push(`Score: ${tot} / 300  (${rank}; overclaims: ${over})`);
+  L.push('');
+  MISSIONS.forEach((m, i) => {
+    const rounds = [0, 1].filter((r) => scoreMission(i, r));
+    const best = bestScore(i);
+    L.push(`Mission ${m.num}: ${m.title}  "${m.claim}"`);
+    rounds.forEach((r) => {
+      const st = roundObj(i, r), sc = scoreMission(i, r), ch = st.ch;
+      if (rounds.length > 1) L.push(`  [Round ${r + 1}${best.round === r ? ', counted' : ''}]`);
+      L.push(`  Design: ${summarySentences(m, ch).map((s) => s.replace(/<[^>]+>/g, '')).join(' ')}`);
+      L.push(`  You named it: ${labelName(st.labelSubmitted)} (${st.labelOk ? 'correct' : 'incorrect; it is a ' + correctLabels(m, ch).map(labelName).join(' or ')})`);
+      L.push(`  Ethics board: ${st.attempts} submission(s)`);
+      L.push(`  Result: ${estText(resultFor(i, r))}, likely range ${rangeTextRes(resultFor(i, r))}`);
+      m.claims.forEach((c, k) => {
+        const d = sc.detail[k];
+        L.push(`  Claim ${k + 1}: ${st.marks[c.id] === 'yes' ? 'CLAIMED' : 'not claimed'}${d.right ? ' (right)' : d.said ? ' (OVERCLAIM)' : ' (missed)'}  ${c.text}`);
+      });
+      L.push(`  Points: ${sc.total} / 100`);
+    });
+    L.push('');
+  });
+  const RP = reflPrompts();
+  L.push(`Reflection 1. ${RP[0]}`); L.push(state.refl[0].trim()); L.push('');
+  L.push(`Reflection 2. ${RP[1]}`); L.push(state.refl[1].trim()); L.push('');
+  L.push(`Verification code: ${code}`);
+  L.push(`[${body}|code=${code}]`);
+  return L.join('\n');
+}
+function renderTicket() {
+  const incomplete = state.missions.some((x) => !x.submitted);
+  if (incomplete) {
+    const k = state.missions.findIndex((x) => !x.submitted);
+    $('#app').innerHTML = `<section class="paper ticket"><h1>Almost there</h1><p>Finish Mission ${k + 1} first.</p><div><button class="btn" id="backM" type="button">Go to Mission ${k + 1}</button></div></section>`;
+    $('#backM').onclick = () => { state.mission = k; state.round = 0; go(state.missions[k].ran ? 'results' : 'design'); };
+    return;
+  }
+  const { body, code, tot, over } = machineBlock();
+  const [rank, rankDesc] = rankFor(tot, over);
+  const w = state.refl.map(words);
+  const ok = w.every((x) => x >= MIN_WORDS);
+  const pct = tot / 300;
+  const dial = `<svg class="rank-dial" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="50" fill="none" stroke="#e3e9f1" stroke-width="12"/><circle cx="60" cy="60" r="50" fill="none" stroke="#E57200" stroke-width="12" stroke-linecap="round" stroke-dasharray="${(314.16 * pct).toFixed(1)} 400" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="26" font-weight="700" fill="#13203a">${tot}</text><text x="60" y="78" text-anchor="middle" font-size="11" fill="#4d5b74">of 300</text></svg>`;
+  $('#app').innerHTML = `
+  <section class="paper ticket" id="ticket">
+    <div>
+      <p class="kicker">Exit ticket · Week 12 · Build the Study</p>
+      <h1>${esc(state.team)}</h1>
+      <p class="muted">${esc(state.ids.join(', '))} · ${esc(new Date(state.finishedAt || Date.now()).toLocaleString())}</p>
+    </div>
+    <div class="rank">${dial}<div><h2>${esc(rank)}</h2><p class="muted">${esc(rankDesc)}${over ? ` Overclaims: ${over}.` : ' No overclaims.'}</p></div></div>
+    <div class="t-wrap"><table class="t-table">
+      <thead><tr><th>Mission</th><th>Your design</th><th>Named it</th><th>Claims</th><th>Points</th></tr></thead>
+      <tbody>${MISSIONS.map((m, i) => {
+        const rounds = [0, 1].filter((r) => scoreMission(i, r)), best = bestScore(i);
+        return rounds.map((r, j) => {
+          const st = roundObj(i, r), sc = scoreMission(i, r);
+          const first = j === 0 ? `<td rowspan="${rounds.length}"><b>${m.num}. ${esc(m.title)}</b><br><span class="muted">${esc(m.claim)}</span></td>` : '';
+          return `<tr>${first}
+          <td>${rounds.length > 1 ? `<b>Round ${r + 1}</b><br>` : ''}${summarySentences(m, st.ch).map((s) => s.replace(/<b>|<\/b>/g, '')).map(esc).join('<br>')}</td>
+          <td>${esc(labelName(st.labelSubmitted))} ${st.labelOk ? '✓' : '✕'}</td>
+          <td>${sc.detail.map((d, k) => `${k + 1}: ${d.said ? 'claimed' : 'not claimed'} ${d.right ? '✓' : d.said ? '✕ overclaim' : '✕ missed'}`).join('<br>')}</td>
+          <td class="num"><b>${sc.total}</b>${rounds.length > 1 ? `<br><span class="muted">${best.round === r ? 'counted' : 'not counted'}</span>` : ''}</td></tr>`;
+        }).join('');
+      }).join('')}</tbody>
+    </table></div>
+    ${reflPrompts().map((q, k) => `<div class="field">
+      <label for="refl${k}">${k + 1}. ${esc(q)}</label>
+      <textarea id="refl${k}" class="screen-only" rows="4" maxlength="1500">${esc(state.refl[k])}</textarea>
+      <div class="print-text">${esc(state.refl[k])}</div>
+      <span class="wc ${w[k] >= MIN_WORDS ? 'ok' : ''} screen-only" id="wc${k}">${w[k]} words${w[k] >= MIN_WORDS ? '' : ` (at least ${MIN_WORDS})`}</span>
+    </div>`).join('')}
+    <div><p class="kicker" style="color:var(--ink-soft)">Verification code</p><div class="code-box">${code}</div></div>
+    <div class="no-print">
+      <p style="font-weight:700;margin-bottom:8px">Save the ticket, then upload it to the Canvas assignment.</p>
+      <div class="ticket-actions">
+        <button class="btn" id="pdfBtn" type="button" ${ok ? '' : 'disabled'}>Save as PDF</button>
+        <button class="btn ghost" id="txtBtn" type="button" ${ok ? '' : 'disabled'}>Download .txt</button>
+        <button class="btn ghost" id="copyBtn" type="button" ${ok ? '' : 'disabled'}>Copy ticket text</button>
+        <button class="btn ghost" id="backBtn2" type="button">Review Mission 3</button>
+      </div>
+      <p class="muted" style="font-size:13px;margin-top:8px" id="saveNote">${ok ? 'In the print window, choose “Save as PDF” as the destination. Each team member uploads the same file.' : `Write at least ${MIN_WORDS} words for each reflection to unlock saving.`}</p>
+    </div>
+    <p class="machine">[${esc(body)}|code=${code}]</p>
+  </section>`;
+  $$('textarea[id^=refl]').forEach((t, k) => t.oninput = () => {
+    state.refl[k] = t.value; save();
+    const n = words(t.value), el = $(`#wc${k}`);
+    el.textContent = `${n} words${n >= MIN_WORDS ? '' : ` (at least ${MIN_WORDS})`}`; el.classList.toggle('ok', n >= MIN_WORDS);
+    const okNow = state.refl.every((x) => words(x) >= MIN_WORDS);
+    ['#pdfBtn', '#txtBtn', '#copyBtn'].forEach((s) => { $(s).disabled = !okNow; });
+    const mb = machineBlock(); $('.code-box').textContent = mb.code; $('.machine').textContent = `[${mb.body}|code=${mb.code}]`;
+    $$('.print-text')[k].textContent = t.value;
+    $('#saveNote').textContent = okNow ? 'In the print window, choose “Save as PDF” as the destination. Each team member uploads the same file.' : `Write at least ${MIN_WORDS} words for each reflection to unlock saving.`;
+  });
+  $('#pdfBtn').onclick = () => {
+    renderTicket();
+    const prev = document.title; document.title = `BuildTheStudy_${state.ids.join('_')}`;
+    try { window.print(); } catch (e) { /* print blocked */ }
+    document.title = prev;
+    $('#saveNote').textContent = 'If no print window opened (some embedded viewers block it), use Download .txt or Copy ticket text instead.';
+  };
+  $('#txtBtn').onclick = () => {
+    try {
+      const blob = new Blob([ticketText()], { type: 'text/plain' });
+      const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `BuildTheStudy_${state.ids.join('_')}.txt`;
+      document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+    } catch (e) { $('#saveNote').textContent = 'Download blocked here. Use Copy ticket text and paste it into a file.'; }
+  };
+  $('#copyBtn').onclick = async () => {
+    try { await navigator.clipboard.writeText(ticketText()); $('#saveNote').textContent = 'Copied. Paste it into a text file or straight into the Canvas text box.'; sfx.good(); }
+    catch (e) { $('#saveNote').textContent = 'Copy was blocked. Use Download .txt instead.'; }
+  };
+  $('#backBtn2').onclick = () => { state.mission = MISSIONS.length - 1; state.round = 0; go('results'); };
+  if (!state.ticketCheered && ok) { state.ticketCheered = true; save(); }
+  if (!state.cheered) { state.cheered = true; save(); if (tot >= 220) burst(140); }
+}
+
+/* ====================================================================
+   Modals, method finder, confetti
+   ==================================================================== */
+let lastFocus = null;
+function openModal(html, escClose = true) {
+  lastFocus = document.activeElement;
+  $('#modal-root').innerHTML = `<div class="modal-backdrop" id="backdrop">${html}</div>`;
+  const bd = $('#backdrop');
+  bd.addEventListener('click', (e) => { if (e.target === bd && escClose) closeModal(); });
+  bd.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && escClose) closeModal();
+    if (e.key === 'Tab') {
+      const f = $$('button, [href], input, select, textarea', bd).filter((x) => !x.disabled);
+      if (!f.length) return;
+      if (e.shiftKey && document.activeElement === f[0]) { e.preventDefault(); f[f.length - 1].focus(); }
+      else if (!e.shiftKey && document.activeElement === f[f.length - 1]) { e.preventDefault(); f[0].focus(); }
+    }
+  });
+}
+function closeModal() { $('#modal-root').innerHTML = ''; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
+function openConfirm(title, text, okText, onOk) {
+  openModal(`<div class="paper modal" role="dialog" aria-modal="true" aria-labelledby="cfT"><h2 id="cfT">${esc(title)}</h2><p class="muted" style="margin:8px 0 18px">${esc(text)}</p><div class="modal-actions"><button class="btn ghost" id="cfNo" type="button">Cancel</button><button class="btn" id="cfYes" type="button">${esc(okText)}</button></div></div>`);
+  $('#cfNo').onclick = closeModal; $('#cfYes').onclick = () => { closeModal(); onOk(); }; $('#cfNo').focus();
+}
+function openFinder() {
+  openModal(`<div class="paper modal finder" role="dialog" aria-modal="true" aria-labelledby="mfT">
+    <p class="kicker">From Tuesday’s lecture</p>
+    <h2 id="mfT">The method finder</h2>
+    <ol>
+      <li><b>Is there an IV, a difference between conditions you can compare?</b> No: it is non-experimental (correlational study, observation, case study, interview).</li>
+      <li><b>Could the researcher put anyone in any condition (random allocation)?</b> Yes: a true experiment. In a controlled setting, a lab experiment; in a real setting, a field experiment.</li>
+      <li><b>If not, what made the groups differ?</b> A real-life event: a natural experiment. Something people already are or chose: a quasi-experiment.</li>
+    </ol>
+    <table><thead><tr><th>Design</th><th>Cause and effect?</th><th>Watch out for</th></tr></thead><tbody>
+      <tr><td>Lab experiment</td><td>Yes</td><td>Low realism, demand characteristics</td></tr>
+      <tr><td>Field experiment</td><td>Yes</td><td>Less control, ethics, cost</td></tr>
+      <tr><td>Natural experiment</td><td>With caution</td><td>Other things changed at the same time</td></tr>
+      <tr><td>Quasi-experiment</td><td>With caution</td><td>Groups differ in other ways</td></tr>
+      <tr><td>Correlational study</td><td>No</td><td>Direction of the arrow, third variables, curves</td></tr>
+      <tr><td>Observation</td><td>No (unless part of an experiment)</td><td>Observer bias; define what you count</td></tr>
+      <tr><td>Case study</td><td>No</td><td>A sample of one</td></tr>
+    </tbody></table>
+    <p class="muted" style="margin-top:10px;font-size:13.5px">Searle (1999), Section Two, summary table p. 30.</p>
+    <div class="modal-actions" style="margin-top:14px"><button class="btn" id="mfClose" type="button">Back to the lab</button></div>
+  </div>`);
+  $('#mfClose').onclick = closeModal; $('#mfClose').focus();
+}
+function burst(count = 80) {
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const c = document.createElement('canvas'); c.className = 'confetti'; c.width = innerWidth; c.height = innerHeight; document.body.appendChild(c);
+  const g = c.getContext('2d'); if (!g) { c.remove(); return; }
+  const cols = ['#E57200', '#3AA6D8', '#F6C445', '#1F9D55', '#F2F5F9'];
+  const ps = Array.from({ length: count }, () => ({ x: innerWidth / 2, y: innerHeight * 0.35, vx: (Math.random() - 0.5) * 14, vy: -Math.random() * 12 - 4, s: 4 + Math.random() * 5, c: cols[Math.floor(Math.random() * cols.length)], a: Math.random() * 6 }));
+  let t = 0;
+  (function frame() {
+    g.clearRect(0, 0, c.width, c.height);
+    ps.forEach((p) => { p.vy += 0.4; p.x += p.vx; p.y += p.vy; p.a += 0.2; g.save(); g.translate(p.x, p.y); g.rotate(p.a); g.fillStyle = p.c; g.fillRect(-p.s / 2, -p.s / 4, p.s, p.s / 2); g.restore(); });
+    if (++t < 90) requestAnimationFrame(frame); else c.remove();
+  })();
+}
+
+/* ====================================================================
+   Boot
+   ==================================================================== */
+function setSoundBtn() { const b = $('#soundBtn'); b.textContent = state.sound ? 'Sound on' : 'Sound off'; b.setAttribute('aria-pressed', String(state.sound)); }
+$('#soundBtn').onclick = () => { state.sound = !state.sound; save(); setSoundBtn(); sfx.click(); };
+$('#defsBtn').onclick = openFinder;
+load();
+setSoundBtn();
+render();
+if ('serviceWorker' in navigator && location.protocol.startsWith('http') && !window.__BTS_STANDALONE__) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register('service-worker.js').catch(() => {}); });
+}
+window.__BTS__ = { state: () => state, MISSIONS, resultFor, scoreMission, bestScore, machineBlock, ticketText, fnv, hex8, SALT, makeRng };
+})();
+
+</script>
+</body>
+</html>
